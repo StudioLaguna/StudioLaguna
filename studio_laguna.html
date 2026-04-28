@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STUDIO LAGUNA — Diseño & Gestión Web · Torreón</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow+Condensed:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <!-- Logo A (compact) in nav -->
+      <div class="logo-mark">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sol Lagunero mark: rising sun over horizon line -->
+          <circle cx="18" cy="20" r="8" fill="#e8a020" opacity="0.9"/>
+          <line x1="4" y1="20" x2="32" y2="20" stroke="#c4a882" stroke-width="1" opacity="0.5"/>
+          <!-- Rays -->
+          <line x1="18" y1="4" x2="18" y2="8" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="7" y1="9" x2="10" y2="12" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="29" y1="9" x2="26" y2="12" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="3" y1="19" x2="7" y2="19" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="33" y1="19" x2="29" y2="19" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Geometric step base (Mesoamerican) -->
+          <path d="M10 28h4v-3h8v3h4" stroke="#c4621a" stroke-width="1.2" fill="none" stroke-linecap="square"/>
+        </svg>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-main">Studio <span style="color:var(--sol)">Laguna</span></span>
+        <span class="logo-sub">Torreón · Diseño Web</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#precios">Precios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Agendar Cita</button>
+  </nav>
+
+  <!-- ════════════ LOGO OPTIONS SHOWCASE ════════════ -->
+  <div class="logo-showcase" style="padding-top:9rem;" id="logos">
+    <div class="logo-showcase-header">
+      <p>Propuesta de identidad visual</p>
+      <h2>Opciones de Logo</h2>
+    </div>
+    <div class="logo-options">
+
+      <!-- OPTION A: Sol Lagunero — dark bg -->
+      <div class="logo-option">
+        <span class="option-name">Opción A · "Sol Lagunero"</span>
+        <div class="logo-a">
+          <div class="logo-a-mark">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Main sun circle -->
+              <circle cx="40" cy="46" r="18" fill="#e8a020"/>
+              <!-- Inner circle -->
+              <circle cx="40" cy="46" r="11" fill="#c4621a" opacity="0.6"/>
+              <!-- Horizon line -->
+              <line x1="6" y1="46" x2="74" y2="46" stroke="#c4a882" stroke-width="0.8" opacity="0.6"/>
+              <!-- Rays top -->
+              <line x1="40" y1="6" x2="40" y2="16" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+              <line x1="14" y1="16" x2="21" y2="23" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+              <line x1="66" y1="16" x2="59" y2="23" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="40" x2="16" y2="40" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+              <line x1="74" y1="40" x2="64" y2="40" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+              <!-- Mesoamerican step base -->
+              <path d="M18 62h10v-6h24v6h10" stroke="#c4621a" stroke-width="1.5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+              <path d="M24 62h6v-3h20v3h6" stroke="#e8a020" stroke-width="1" fill="none" stroke-linecap="square" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="logo-a-text">
+            <span class="main">Studio Laguna</span>
+            <span class="sub">Torreón, Coahuila · Diseño Web</span>
+          </div>
+        </div>
+        <div class="logo-option-label">Fondo oscuro · Versión principal</div>
+      </div>
+
+      <!-- OPTION A: on light background -->
+      <div class="logo-option on-light">
+        <span class="option-name dark">Opción A · Fondo claro</span>
+        <div class="logo-a">
+          <div class="logo-a-mark">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="46" r="18" fill="#c4621a"/>
+              <circle cx="40" cy="46" r="11" fill="#1a110a" opacity="0.3"/>
+              <line x1="6" y1="46" x2="74" y2="46" stroke="#5c3d22" stroke-width="0.8" opacity="0.6"/>
+              <line x1="40" y1="6" x2="40" y2="16" stroke="#c4621a" stroke-width="2" stroke-linecap="round"/>
+              <line x1="14" y1="16" x2="21" y2="23" stroke="#c4621a" stroke-width="2" stroke-linecap="round"/>
+              <line x1="66" y1="16" x2="59" y2="23" stroke="#c4621a" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="40" x2="16" y2="40" stroke="#c4621a" stroke-width="2" stroke-linecap="round"/>
+              <line x1="74" y1="40" x2="64" y2="40" stroke="#c4621a" stroke-width="2" stroke-linecap="round"/>
+              <path d="M18 62h10v-6h24v6h10" stroke="#1a110a" stroke-width="1.5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+            </svg>
+          </div>
+          <div class="logo-a-text">
+            <span class="main">Studio Laguna</span>
+            <span class="sub">Torreón, Coahuila · Diseño Web</span>
+          </div>
+        </div>
+        <div class="logo-option-label">Fondo claro · Papelería</div>
+      </div>
+
+      <!-- OPTION B: Cantera — italic bold serif + diamond mark -->
+      <div class="logo-option">
+        <span class="option-name">Opción B · "Cantera"</span>
+        <div class="logo-b">
+          <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- S monogram with cantera block feel -->
+            <!-- Outer diamond frame -->
+            <polygon points="26,2 50,26 26,58 2,26" stroke="#e8a020" stroke-width="1.2" fill="none"/>
+            <polygon points="26,8 44,26 26,52 8,26" stroke="#c4621a" stroke-width="0.6" fill="none" opacity="0.5"/>
+            <!-- SL letterform inside -->
+            <text x="26" y="33" text-anchor="middle" font-family="Playfair Display, serif" font-size="18" font-weight="900" font-style="italic" fill="#f0e6d6">SL</text>
+          </svg>
+          <div class="logo-b-text">
+            <span class="main">Studio<br>Laguna</span>
+            <span class="sub">Diseño · Torreón · Coahuila</span>
+          </div>
+        </div>
+        <div class="logo-option-label">Fondo oscuro · Alta presencia</div>
+      </div>
+
+      <!-- OPTION B on light -->
+      <div class="logo-option on-light">
+        <span class="option-name dark">Opción B · Fondo claro</span>
+        <div class="logo-b">
+          <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="26,2 50,26 26,58 2,26" stroke="#c4621a" stroke-width="1.2" fill="none"/>
+            <polygon points="26,8 44,26 26,52 8,26" stroke="#1a110a" stroke-width="0.6" fill="none" opacity="0.3"/>
+            <text x="26" y="33" text-anchor="middle" font-family="Playfair Display, serif" font-size="18" font-weight="900" font-style="italic" fill="#1a110a">SL</text>
+          </svg>
+          <div class="logo-b-text">
+            <span class="main">Studio<br>Laguna</span>
+            <span class="sub">Diseño · Torreón · Coahuila</span>
+          </div>
+        </div>
+        <div class="logo-option-label">Fondo claro · Tarjetas</div>
+      </div>
+
+      <!-- OPTION C: Sotol — minimal with rule -->
+      <div class="logo-option">
+        <span class="option-name">Opción C · "Sotol"</span>
+        <div class="logo-c">
+          <!-- Sotol plant silhouette icon -->
+          <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.4rem;">
+            <svg width="28" height="44" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Sotol/agave plant simplified -->
+              <line x1="14" y1="44" x2="14" y2="14" stroke="#e8a020" stroke-width="1.5"/>
+              <!-- Spines radiating -->
+              <line x1="14" y1="22" x2="2" y2="14" stroke="#e8a020" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="14" y1="22" x2="26" y2="14" stroke="#e8a020" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="14" y1="28" x2="0" y2="20" stroke="#c4621a" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+              <line x1="14" y1="28" x2="28" y2="20" stroke="#c4621a" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+              <line x1="14" y1="34" x2="4" y2="30" stroke="#c4a882" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+              <line x1="14" y1="34" x2="24" y2="30" stroke="#c4a882" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+              <!-- Top bloom -->
+              <circle cx="14" cy="12" r="3" fill="#e8a020"/>
+              <circle cx="14" cy="12" r="1.5" fill="#c4621a"/>
+            </svg>
+            <div class="logo-c">
+              <span class="logo-c-main">Studio<br>Laguna</span>
+              <div class="logo-c-row">
+                <div class="logo-c-line"></div>
+                <span class="logo-c-sub">Diseño Web · Torreón</span>
+                <div class="logo-c-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="logo-option-label">Fondo oscuro · Minimalista</div>
+      </div>
+
+      <!-- OPTION C on light -->
+      <div class="logo-option on-light">
+        <span class="option-name dark">Opción C · Fondo claro</span>
+        <div class="logo-c">
+          <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.4rem;">
+            <svg width="28" height="44" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="14" y1="44" x2="14" y2="14" stroke="#c4621a" stroke-width="1.5"/>
+              <line x1="14" y1="22" x2="2" y2="14" stroke="#c4621a" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="14" y1="22" x2="26" y2="14" stroke="#c4621a" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="14" y1="28" x2="0" y2="20" stroke="#5c3d22" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+              <line x1="14" y1="28" x2="28" y2="20" stroke="#5c3d22" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+              <line x1="14" y1="34" x2="4" y2="30" stroke="#8c6245" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+              <line x1="14" y1="34" x2="24" y2="30" stroke="#8c6245" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+              <circle cx="14" cy="12" r="3" fill="#c4621a"/>
+              <circle cx="14" cy="12" r="1.5" fill="#1a110a"/>
+            </svg>
+            <div class="logo-c on-light">
+              <span class="logo-c-main">Studio<br>Laguna</span>
+              <div class="logo-c-row">
+                <div class="logo-c-line"></div>
+                <span class="logo-c-sub">Diseño Web · Torreón</span>
+                <div class="logo-c-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="logo-option-label">Fondo claro · Minimalista</div>
+      </div>
+
+    </div><!-- end logo-options -->
+  </div><!-- end logo-showcase -->
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="hero">
+    <!-- Desert ornament SVG -->
+    <svg class="hero-ornament" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Mesoamerican step-fret / greca pattern -->
+      <rect x="10" y="10" width="160" height="160" stroke="#e8a020" stroke-width="1" fill="none"/>
+      <rect x="20" y="20" width="140" height="140" stroke="#e8a020" stroke-width="0.5" fill="none"/>
+      <!-- Step fret top-left -->
+      <path d="M10 10 h40 v20 h-20 v20 h-20 z" stroke="#e8a020" stroke-width="1" fill="none"/>
+      <!-- Step fret top-right -->
+      <path d="M170 10 h-40 v20 h20 v20 h20 z" stroke="#e8a020" stroke-width="1" fill="none"/>
+      <!-- Step fret bottom-left -->
+      <path d="M10 170 h40 v-20 h-20 v-20 h-20 z" stroke="#c4621a" stroke-width="1" fill="none"/>
+      <!-- Step fret bottom-right -->
+      <path d="M170 170 h-40 v-20 h20 v-20 h20 z" stroke="#c4621a" stroke-width="1" fill="none"/>
+      <!-- Center cross -->
+      <line x1="90" y1="50" x2="90" y2="130" stroke="#e8a020" stroke-width="0.5" opacity="0.5"/>
+      <line x1="50" y1="90" x2="130" y2="90" stroke="#e8a020" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="90" cy="90" r="15" stroke="#e8a020" stroke-width="0.5" fill="none" opacity="0.5"/>
+    </svg>
+
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-horizon"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Diseño &amp; Desarrollo Web · Torreón, Coahuila</div>
+      <h1>
+        TU PRESENCIA
+        <span class="line2">DIGITAL.</span>
+      </h1>
+      <p class="hero-desc">
+        Creamos y gestionamos sitios web de alto impacto que convierten visitantes en clientes. Diseño personalizado, resultados medibles.
+      </p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary">Agendar Consulta Gratis</a>
+      </div>
+    </div>
+
+    <div class="stats-strip">
+      <div class="stat-item">
+        <div class="stat-num" data-target="24">0</div>
+        <div class="stat-label">Soporte Hrs/7 Días</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item">Diseño Web <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">E-Commerce <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Landing Pages <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">SEO Avanzado <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Gestión Web <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Mantenimiento <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Diseño Web <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">E-Commerce <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Landing Pages <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">SEO Avanzado <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Gestión Web <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Mantenimiento <span class="marquee-dot">✦</span></span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="section" id="servicios">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-tag">Lo que hacemos</div>
+        <h2 class="section-title">NUESTROS<br><em>SERVICIOS</em></h2>
+      </div>
+      <p class="section-desc">Soluciones digitales completas para que tu negocio destaque en línea y genere resultados reales.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-name">Diseño Web a Medida</div>
+        <p class="service-desc">Creamos sitios web únicos y profesionales adaptados a la identidad de tu marca y las necesidades de tu negocio.</p>
+        <div class="service-tags">
+          <span class="tag">UI/UX</span>
+          <span class="tag">Responsive</span>
+          <span class="tag">Personalizado</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-name">E-Commerce</div>
+        <p class="service-desc">Tiendas en línea potentes con sistemas de pago seguros, gestión de inventario y experiencia de compra optimizada.</p>
+        <div class="service-tags">
+          <span class="tag">Shopify</span>
+          <span class="tag">WooCommerce</span>
+          <span class="tag">Pagos</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-name">Landing Pages</div>
+        <p class="service-desc">Páginas de aterrizaje de alta conversión diseñadas para capturar leads y convertir visitantes en clientes.</p>
+        <div class="service-tags">
+          <span class="tag">Conversión</span>
+          <span class="tag">A/B Testing</span>
+          <span class="tag">Analytics</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-name">SEO &amp; Posicionamiento</div>
+        <p class="service-desc">Optimización para motores de búsqueda para que tus clientes te encuentren primero cuando buscan tus productos.</p>
+        <div class="service-tags">
+          <span class="tag">On-Page SEO</span>
+          <span class="tag">Google</span>
+          <span class="tag">Auditoría</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-name">Gestión y Mantenimiento</div>
+        <p class="service-desc">Mantenemos tu sitio actualizado, seguro y funcionando perfectamente para que tú te concentres en tu negocio.</p>
+        <div class="service-tags">
+          <span class="tag">Actualizaciones</span>
+          <span class="tag">Seguridad</span>
+          <span class="tag">Soporte 24/7</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-name">Rediseño Web</div>
+        <p class="service-desc">Transformamos sitios web obsoletos en plataformas modernas, rápidas y optimizadas para los estándares actuales.</p>
+        <div class="service-tags">
+          <span class="tag">Modernización</span>
+          <span class="tag">Performance</span>
+          <span class="tag">Migración</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section process-section" id="proceso">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-tag">Cómo trabajamos</div>
+        <h2 class="section-title">EL<br><em>PROCESO</em></h2>
+      </div>
+    </div>
+    <div class="process-steps reveal">
+      <div class="step">
+        <div class="step-dot"></div>
+        <div class="step-num">// 01</div>
+        <div class="step-title">Consulta Inicial</div>
+        <p class="step-desc">Nos reunimos para entender tu negocio, objetivos y visión. Sin costo, sin compromiso.</p>
+      </div>
+      <div class="step">
+        <div class="step-dot" style="background:var(--cobre); box-shadow: 0 0 20px rgba(196,98,26,0.6)"></div>
+        <div class="step-num">// 02</div>
+        <div class="step-title">Propuesta y Diseño</div>
+        <p class="step-desc">Elaboramos una propuesta personalizada con wireframes y paleta visual de tu proyecto.</p>
+      </div>
+      <div class="step">
+        <div class="step-dot" style="background:var(--mezcal); box-shadow: 0 0 20px rgba(107,140,66,0.6)"></div>
+        <div class="step-num">// 03</div>
+        <div class="step-title">Desarrollo</div>
+        <p class="step-desc">Construimos tu sitio con tecnologías modernas, rápido y optimizado desde el primer día.</p>
+      </div>
+      <div class="step">
+        <div class="step-dot"></div>
+        <div class="step-num">// 04</div>
+        <div class="step-title">Revisión</div>
+        <p class="step-desc">Te presentamos el sitio completo y hacemos los ajustes necesarios hasta que quede perfecto.</p>
+      </div>
+      <div class="step">
+        <div class="step-dot" style="background:var(--cobre); box-shadow: 0 0 20px rgba(196,98,26,0.6)"></div>
+        <div class="step-num">// 05</div>
+        <div class="step-title">Lanzamiento</div>
+        <p class="step-desc">Publicamos tu sitio con dominio, hosting y configuración SEO inicial lista para conquistar.</p>
+      </div>
+      <div class="step">
+        <div class="step-dot" style="background:var(--mezcal); box-shadow: 0 0 20px rgba(107,140,66,0.6)"></div>
+        <div class="step-num">// 06</div>
+        <div class="step-title">Soporte Continuo</div>
+        <p class="step-desc">Te acompañamos con mantenimiento, actualizaciones y soporte para que nunca estés solo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="precios" style="background: var(--bg2);">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-tag">Planes y Tarifas</div>
+        <h2 class="section-title">PRECIOS<br><em>CLAROS</em></h2>
+      </div>
+      <p class="section-desc">Sin costos ocultos. Planes que se adaptan al tamaño y necesidades de tu negocio.</p>
+    </div>
+    <div class="pricing-grid reveal">
+      <div class="price-card">
+        <div class="price-plan">Básico</div>
+        <div class="price-amount"><sup>$</sup>8,500</div>
+        <div class="price-period">MXN · Pago único</div>
+        <ul class="price-features">
+          <li class="included">Diseño personalizado</li>
+          <li class="included">Hosting + Dominio incluido</li>
+          <li class="included">Formulario de contacto</li>
+          <li>Agendar citas</li>
+          <li>WhatsApp directo</li>
+        </ul>
+        <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">Contratar</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-plan">Avanzado</div>
+        <div class="price-amount"><sup>$</sup>13,000</div>
+        <div class="price-period">MXN · Pago único</div>
+        <ul class="price-features">
+          <li class="included">Todo lo del Básico</li>
+          <li class="included">Sistema de citas integrado</li>
+          <li class="included">WhatsApp directo al negocio</li>
+          <li class="included">Diseño premium a medida</li>
+          <li class="included">SEO completo</li>
+        </ul>
+        <a href="#contacto" class="btn-primary" style="display:block; text-align:center;">Contratar</a>
+      </div>
+      <div class="price-card">
+        <div class="price-plan">Business</div>
+        <div class="price-amount"><sup>$</sup>5,000</div>
+        <div class="price-period">MXN · Mensualidad</div>
+        <ul class="price-features">
+          <li class="included">Páginas ilimitadas</li>
+          <li class="included">E-Commerce completo</li>
+          <li class="included">SEO avanzado + Analíticas</li>
+          <li class="included">Mantenimiento continuo</li>
+          <li class="included">Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">Contratar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contacto">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-tag">Hablemos</div>
+        <h2>AGENDA TU<br><em>CONSULTA</em><br>GRATIS</h2>
+        <p>¿Listo para llevar tu negocio al mundo digital? Contáctanos y te asesoramos sin costo ni compromiso.</p>
+        <div class="contact-methods">
+          <a href="https://wa.me/528714104480?text=Hola!%20Me%20interesa%20información%20sobre%20sus%20servicios%20de%20diseño%20web" target="_blank" class="contact-method">
+            <div class="method-icon">💬</div>
+            <div class="method-info">
+              <div class="method-label">WhatsApp Directo</div>
+              <div class="method-value">+52 871 410 4480</div>
+            </div>
+          </a>
+          <a href="mailto:hola@studiolaguna.mx" class="contact-method">
+            <div class="method-icon">✉️</div>
+            <div class="method-info">
+              <div class="method-label">Correo Electrónico</div>
+              <div class="method-value">hola@studiolaguna.mx</div>
+            </div>
+          </a>
+          <div class="contact-method" style="cursor:default;">
+            <div class="method-icon">📍</div>
+            <div class="method-info">
+              <div class="method-label">Ubicación</div>
+              <div class="method-value">Torreón, Coahuila · México</div>
+            </div>
+          </div>
+          <div class="contact-method" style="cursor:default;">
+            <div class="method-icon">🕐</div>
+            <div class="method-info">
+              <div class="method-label">Horario de Atención</div>
+              <div class="method-value">Lun–Vie 9:00–18:00 · Sáb 10:00–14:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-container reveal">
+        <div id="formWrapper">
+          <div class="form-title">Contactar Ahora</div>
+          <div class="form-subtitle">Elige cómo quieres comunicarte</div>
+          <div class="form-tabs">
+            <button class="form-tab active" onclick="switchTab('cita', this)">📅 Agendar Cita</button>
+            <button class="form-tab" onclick="switchTab('mensaje', this)">✉️ Enviar Mensaje</button>
+            <button class="form-tab" onclick="switchTab('whatsapp', this)">💬 WhatsApp</button>
+          </div>
+
+          <!-- CITA -->
+          <div class="tab-content active" id="tab-cita">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre-cita">Nombre completo</label>
+                <input type="text" id="nombre-cita" placeholder="Juan García" />
+              </div>
+              <div class="form-group">
+                <label for="empresa">Empresa / Negocio</label>
+                <input type="text" id="empresa" placeholder="Mi Negocio SA" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tel-cita">WhatsApp / Teléfono</label>
+                <input type="tel" id="tel-cita" placeholder="+52 871 000 0000" />
+              </div>
+              <div class="form-group">
+                <label for="email-cita">Correo electrónico</label>
+                <input type="email" id="email-cita" placeholder="juan@email.com" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fecha">Fecha preferida</label>
+                <input type="date" id="fecha" />
+              </div>
+              <div class="form-group">
+                <label for="hora">Hora preferida</label>
+                <select id="hora">
+                  <option value="">Selecciona un horario</option>
+                  <option>09:00 - 10:00</option>
+                  <option>10:00 - 11:00</option>
+                  <option>11:00 - 12:00</option>
+                  <option>12:00 - 13:00</option>
+                  <option>14:00 - 15:00</option>
+                  <option>15:00 - 16:00</option>
+                  <option>16:00 - 17:00</option>
+                  <option>17:00 - 18:00</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="servicio">Servicio de interés</label>
+              <select id="servicio">
+                <option value="">¿Qué necesitas?</option>
+                <option>Diseño web desde cero</option>
+                <option>Tienda en línea (E-Commerce)</option>
+                <option>Landing Page</option>
+                <option>Rediseño de sitio existente</option>
+                <option>SEO y posicionamiento</option>
+                <option>Mantenimiento web</option>
+                <option>No estoy seguro aún</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="notas-cita">Cuéntanos sobre tu proyecto</label>
+              <textarea id="notas-cita" placeholder="Describe brevemente tu negocio y lo que buscas..."></textarea>
+            </div>
+            <button class="btn-submit" onclick="submitForm('cita')">AGENDAR CITA →</button>
+          </div>
+
+          <!-- MENSAJE -->
+          <div class="tab-content" id="tab-mensaje">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre-msg">Tu nombre</label>
+                <input type="text" id="nombre-msg" placeholder="Juan García" />
+              </div>
+              <div class="form-group">
+                <label for="email-msg">Correo electrónico</label>
+                <input type="email" id="email-msg" placeholder="juan@email.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <select id="asunto">
+                <option value="">Tema del mensaje</option>
+                <option>Cotización de proyecto</option>
+                <option>Información de planes</option>
+                <option>Soporte técnico</option>
+                <option>Asociación o alianza</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" style="min-height:130px;" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+            <button class="btn-submit" onclick="submitForm('mensaje')">ENVIAR MENSAJE →</button>
+          </div>
+
+          <!-- WHATSAPP -->
+          <div class="tab-content" id="tab-whatsapp">
+            <div style="text-align:center; padding: 1rem 0 2rem;">
+              <div style="font-size:4rem; margin-bottom:1rem;">💬</div>
+              <h3 style="font-family:var(--font-display); font-size:1.8rem; font-style:italic; margin-bottom:0.5rem;">Escríbenos por WhatsApp</h3>
+              <p style="color:var(--muted); font-size:0.9rem; margin-bottom:2rem; line-height:1.6;">
+                Respuesta rápida garantizada. Envíanos un mensaje directo y te atendemos al instante.
+              </p>
+            </div>
+            <div class="form-group">
+              <label for="wa-nombre">Tu nombre (opcional)</label>
+              <input type="text" id="wa-nombre" placeholder="¿Cómo te llamas?" />
+            </div>
+            <div class="form-group">
+              <label for="wa-interes">¿Qué necesitas?</label>
+              <select id="wa-interes">
+                <option value="información sobre sus servicios">Información general</option>
+                <option value="cotización para diseño web">Cotización de diseño web</option>
+                <option value="cotización para tienda en línea">Tienda en línea</option>
+                <option value="cotización para landing page">Landing Page</option>
+                <option value="mantenimiento de mi sitio web">Mantenimiento web</option>
+                <option value="agendar una consulta gratuita">Agendar consulta</option>
+              </select>
+            </div>
+            <a id="btn-wa" href="#" target="_blank" class="btn-whatsapp" onclick="openWhatsApp(event)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              ABRIR WHATSAPP
+            </a>
+            <p style="text-align:center; font-family:var(--font-mono); font-size:0.65rem; color:var(--muted); margin-top:1rem; letter-spacing:1px;">
+              +52 871 410 4480 · Respuesta en menos de 1 hora
+            </p>
+          </div>
+        </div>
+
+        <div class="success-msg" id="successMsg">
+          <div class="success-icon">✅</div>
+          <h3>¡Mensaje Enviado!</h3>
+          <p>Gracias por contactarnos. Te responderemos en menos de 24 horas.</p>
+          <br>
+          <button class="btn-outline" onclick="resetForm()" style="width:100%;">Enviar otro mensaje</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Studio <span>Laguna</span></div>
+        <p>Transformamos negocios con presencias digitales potentes, funcionales y que convierten. Orgullosamente basados en Torreón, Coahuila.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Diseño Web</a></li>
+          <li><a href="#servicios">E-Commerce</a></li>
+          <li><a href="#servicios">Landing Pages</a></li>
+          <li><a href="#servicios">SEO</a></li>
+          <li><a href="#servicios">Mantenimiento</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/528714104480" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:hola@studiolaguna.mx">hola@studiolaguna.mx</a></li>
+          <li><a href="#">Torreón, Coahuila</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 STUDIO LAGUNA · Todos los derechos reservados · Torreón, Coahuila</p>
+      <div class="social-links">
+        <a href="#" class="social-link">ig</a>
+        <a href="#" class="social-link">fb</a>
+        <a href="#" class="social-link">li</a>
+        <a href="https://wa.me/528714104480" target="_blank" class="social-link" style="border-color:#25D366;color:#25D366;">wa</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/528714104480?text=Hola!%20Me%20interesa%20información%20sobre%20sus%20servicios%20de%20diseño%20web"
+     target="_blank" class="whatsapp-float">
+    <span class="wa-tooltip">Escríbenos ahora</span>
+    💬
+  </a>
+
+  <script>
+/* ── Custom cursor ─────────────────────────────── */
+const cursor = document.getElementById('cursor');
+const ring   = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+(function animateCursor() {
+  cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+  rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+  ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+  requestAnimationFrame(animateCursor);
+})();
+
+/* ── Stat counter ──────────────────────────────── */
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  let count = 0; const step = target / 60;
+  const timer = setInterval(() => {
+    count += step;
+    if (count >= target) { count = target; clearInterval(timer); }
+    el.textContent = Math.floor(count) + (el.dataset.target === '95' ? '%' : '+');
+  }, 16);
+}
+
+/* ── Scroll reveal ─────────────────────────────── */
+const reveals  = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+reveals.forEach(r => observer.observe(r));
+
+/* ── Stats observer ────────────────────────────── */
+const statNums = document.querySelectorAll('.stat-num[data-target]');
+const statsObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); statsObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+statNums.forEach(n => statsObs.observe(n));
+
+/* ── Form tabs ─────────────────────────────────── */
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.form-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* ── Form submit ───────────────────────────────── */
+function submitForm(type) {
+  let valid = true;
+  if (type === 'cita') {
+    const n = document.getElementById('nombre-cita').value;
+    const t = document.getElementById('tel-cita').value;
+    if (!n || !t) { alert('Por favor completa nombre y teléfono.'); valid = false; }
+  } else if (type === 'mensaje') {
+    const n = document.getElementById('nombre-msg').value;
+    const m = document.getElementById('mensaje').value;
+    if (!n || !m) { alert('Por favor completa nombre y mensaje.'); valid = false; }
+  }
+  if (valid) {
+    document.getElementById('formWrapper').style.display = 'none';
+    document.getElementById('successMsg').classList.add('show');
+  }
+}
+
+function resetForm() {
+  document.getElementById('formWrapper').style.display = 'block';
+  document.getElementById('successMsg').classList.remove('show');
+}
+
+/* ── WhatsApp ──────────────────────────────────── */
+function openWhatsApp(e) {
+  e.preventDefault();
+  const nombre  = document.getElementById('wa-nombre').value;
+  const interes = document.getElementById('wa-interes').value;
+  let msg = 'Hola! ';
+  if (nombre) msg += 'Mi nombre es ' + nombre + ' y ';
+  msg += 'me interesa ' + interes + '.';
+  window.open('https://wa.me/528714104480?text=' + encodeURIComponent(msg), '_blank');
+}
+
+/* ── Min date ──────────────────────────────────── */
+const dateInput = document.getElementById('fecha');
+if (dateInput) {
+  const today = new Date(); today.setDate(today.getDate() + 1);
+  dateInput.min = today.toISOString().split('T')[0];
+}
+  </script>
+</body>
+</html>
