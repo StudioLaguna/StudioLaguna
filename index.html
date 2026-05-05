@@ -4,9 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>STUDIO LAGUNA — Diseño & Gestión Web · Torreón</title>
-   <link rel="shortcut icon" href="/logo-mark-128.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/logo-mark-128.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow+Condensed:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href= "https://studiolaguna.github.io/StudioLaguna/studio-laguna-styles.css"/> 
+  <link rel="stylesheet" href="https://studiolaguna.github.io/StudioLaguna/studio-laguna-styles.css"/>
+  <style>
+    /* Validación en línea */
+    .field-error {
+      display: none;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 1px;
+      color: #ff6b35;
+      margin-top: 0.3rem;
+    }
+    .field-error.visible { display: block; }
+    input.error-field, textarea.error-field {
+      border-color: #ff6b35 !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,19 +32,15 @@
   <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo">
-      <!-- Logo A (compact) in nav -->
       <div class="logo-mark">
         <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Sol Lagunero mark: rising sun over horizon line -->
           <circle cx="18" cy="20" r="8" fill="#e8a020" opacity="0.9"/>
           <line x1="4" y1="20" x2="32" y2="20" stroke="#c4a882" stroke-width="1" opacity="0.5"/>
-          <!-- Rays -->
           <line x1="18" y1="4" x2="18" y2="8" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
           <line x1="7" y1="9" x2="10" y2="12" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
           <line x1="29" y1="9" x2="26" y2="12" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
           <line x1="3" y1="19" x2="7" y2="19" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
           <line x1="33" y1="19" x2="29" y2="19" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
-          <!-- Geometric step base (Mesoamerican) -->
           <path d="M10 28h4v-3h8v3h4" stroke="#c4621a" stroke-width="1.2" fill="none" stroke-linecap="square"/>
         </svg>
       </div>
@@ -47,25 +58,15 @@
     <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Agendar Cita</button>
   </nav>
 
-  <!-- ════════════ LOGO OPTIONS SHOWCASE borrado ════════════ -->
->
-          
-  <!-- ════════════ HERO ════════════ -->
+  <!-- HERO -->
   <section class="hero">
-    <!-- Desert ornament SVG -->
     <svg class="hero-ornament" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Mesoamerican step-fret / greca pattern -->
       <rect x="10" y="10" width="160" height="160" stroke="#e8a020" stroke-width="1" fill="none"/>
       <rect x="20" y="20" width="140" height="140" stroke="#e8a020" stroke-width="0.5" fill="none"/>
-      <!-- Step fret top-left -->
       <path d="M10 10 h40 v20 h-20 v20 h-20 z" stroke="#e8a020" stroke-width="1" fill="none"/>
-      <!-- Step fret top-right -->
       <path d="M170 10 h-40 v20 h20 v20 h20 z" stroke="#e8a020" stroke-width="1" fill="none"/>
-      <!-- Step fret bottom-left -->
       <path d="M10 170 h40 v-20 h-20 v-20 h-20 z" stroke="#c4621a" stroke-width="1" fill="none"/>
-      <!-- Step fret bottom-right -->
       <path d="M170 170 h-40 v-20 h20 v-20 h20 z" stroke="#c4621a" stroke-width="1" fill="none"/>
-      <!-- Center cross -->
       <line x1="90" y1="50" x2="90" y2="130" stroke="#e8a020" stroke-width="0.5" opacity="0.5"/>
       <line x1="50" y1="90" x2="130" y2="90" stroke="#e8a020" stroke-width="0.5" opacity="0.5"/>
       <circle cx="90" cy="90" r="15" stroke="#e8a020" stroke-width="0.5" fill="none" opacity="0.5"/>
@@ -85,14 +86,16 @@
         Creamos y gestionamos sitios web de alto impacto que convierten visitantes en clientes. Diseño personalizado, resultados medibles.
       </p>
       <div class="hero-actions">
-        <a href="#contacto" class="btn-primary">Agendar Consulta Gratis</a>
+        <!-- CAMBIO: "Agendar Consulta Gratis" → "Agenda tu consulta gratuita" -->
+        <a href="#contacto" class="btn-primary">Agenda tu consulta gratuita</a>
       </div>
     </div>
 
     <div class="stats-strip">
       <div class="stat-item">
         <div class="stat-num" data-target="24">0</div>
-        <div class="stat-label">Soporte Hrs/7 Días</div>
+        <!-- CAMBIO: "Soporte Hrs/7 Días" → "Horas de soporte / 7 días" -->
+        <div class="stat-label">Horas de soporte / 7 días</div>
       </div>
     </div>
   </section>
@@ -158,7 +161,8 @@
       <div class="service-card">
         <div class="service-num">04</div>
         <div class="service-name">SEO &amp; Posicionamiento</div>
-        <p class="service-desc">Optimización para motores de búsqueda para que tus clientes te encuentren primero cuando buscan tus productos.</p>
+        <!-- CAMBIO: "Optimización para motores de búsqueda para que tus clientes te encuentren primero cuando buscan tus productos." -->
+        <p class="service-desc">Optimizamos tu sitio para que aparezcas primero cuando tus clientes buscan lo que ofreces.</p>
         <div class="service-tags">
           <span class="tag">On-Page SEO</span>
           <span class="tag">Google</span>
@@ -201,7 +205,8 @@
         <div class="step-dot"></div>
         <div class="step-num">// 01</div>
         <div class="step-title">Consulta Inicial</div>
-        <p class="step-desc">Nos reunimos para entender tu negocio, objetivos y visión. Sin costo, sin compromiso.</p>
+        <!-- CAMBIO: "Sin costo, sin compromiso." → positivo -->
+        <p class="step-desc">Nos reunimos para entender tu negocio, objetivos y visión. Reunión gratuita y a tu ritmo.</p>
       </div>
       <div class="step">
         <div class="step-dot" style="background:var(--cobre); box-shadow: 0 0 20px rgba(196,98,26,0.6)"></div>
@@ -225,19 +230,19 @@
         <div class="step-dot" style="background:var(--cobre); box-shadow: 0 0 20px rgba(196,98,26,0.6)"></div>
         <div class="step-num">// 05</div>
         <div class="step-title">Lanzamiento</div>
-        <p class="step-desc">Publicamos tu sitio con dominio, hosting y configuración SEO inicial lista para conquistar.</p>
+        <!-- CAMBIO: "lista para conquistar" → específico y con concordancia corregida -->
+        <p class="step-desc">Publicamos tu sitio con dominio, hosting y SEO inicial, listo para recibir a tus primeros clientes.</p>
       </div>
       <div class="step">
         <div class="step-dot" style="background:var(--mezcal); box-shadow: 0 0 20px rgba(107,140,66,0.6)"></div>
         <div class="step-num">// 06</div>
         <div class="step-title">Soporte Continuo</div>
-        <p class="step-desc">Te acompañamos con mantenimiento, actualizaciones y soporte para que nunca estés solo.</p>
+        <!-- CAMBIO: "nunca estés solo" → encuadre positivo y específico -->
+        <p class="step-desc">Te acompañamos con mantenimiento, actualizaciones y soporte continuo después del lanzamiento.</p>
       </div>
     </div>
   </section>
 
-  <!-- PRICING -->
-  
   <!-- PRICING -->
   <section class="section" id="precios" style="background: var(--bg2);">
     <div class="section-header reveal">
@@ -247,7 +252,7 @@
       </div>
       <p class="section-desc">Proyectos puntuales o soporte continuo. Elige el modelo que mejor se adapte a tu negocio.</p>
     </div>
- 
+
     <!-- PROYECTOS PUNTUALES -->
     <div style="margin-bottom: 3rem;">
       <div style="text-align: center; margin-bottom: 2rem;">
@@ -266,9 +271,11 @@
             <li class="included">Integración WhatsApp</li>
             <li class="included">SEO básico</li>
             <li class="included">Dominio + Hosting 1 año</li>
-            <li>Análisis de conversión</li>
+            <!-- CAMBIO: explicitar que no está incluido en este plan -->
+            <li>Análisis de conversión (no incluido en este plan)</li>
           </ul>
-          <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">CONSULTAR</a>
+          <!-- CAMBIO: "CONSULTAR" → accionable -->
+          <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">Solicitar cotización</a>
         </div>
         <div class="price-card">
           <div class="price-plan">Sitio Web Básico</div>
@@ -283,7 +290,8 @@
             <li class="included">Dominio + Hosting 1 año</li>
             <li class="included">Capacitación básica</li>
           </ul>
-          <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">CONSULTAR</a>
+          <!-- CAMBIO: "CONSULTAR" → accionable -->
+          <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">Solicitar cotización</a>
         </div>
         <div class="price-card featured">
           <div class="price-plan">Sitio Web Profesional</div>
@@ -298,11 +306,12 @@
             <li class="included">Dominio + Hosting 1 año</li>
             <li class="included">Soporte 3 meses incluido</li>
           </ul>
-          <a href="#contacto" class="btn-primary" style="display:block; text-align:center;">CONSULTAR</a>
+          <!-- CAMBIO: "CONSULTAR" → accionable -->
+          <a href="#contacto" class="btn-primary" style="display:block; text-align:center;">Solicitar cotización</a>
         </div>
       </div>
     </div>
- 
+
     <!-- SOPORTE Y MANTENIMIENTO MENSUAL -->
     <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
       <div style="text-align: center; margin-bottom: 2rem;">
@@ -330,8 +339,10 @@
           <div class="price-amount"><sup>$</sup>2,500</div>
           <div class="price-period">MXN · Mensualidad</div>
           <ul class="price-features">
-            <li class="included">Todo de Soporte Básico +</li>
-            <li class="included">Respuesta en máximo 24hrs</li>
+            <!-- CAMBIO: "Todo de Soporte Básico +" → gramática correcta -->
+            <li class="included">Todo lo del plan Básico, además de:</li>
+            <!-- CAMBIO: "Respuesta en máximo 24hrs" → encuadre positivo -->
+            <li class="included">Respuesta en menos de 24 horas</li>
             <li class="included">Análisis mensual de SEO</li>
             <li class="included">Optimización de velocidad</li>
             <li class="included">Consultoría digital 1hr/mes</li>
@@ -340,22 +351,24 @@
           </ul>
           <a href="#contacto" class="btn-primary" style="display:block; text-align:center;">CONTRATAR</a>
         </div>
-    
- 
+      </div>
+    </div>
   </section>
+
   <!-- CONTACT -->
   <section class="section contact-section" id="contacto">
     <div class="contact-grid">
       <div class="contact-info reveal">
         <div class="section-tag">Hablemos</div>
         <h2>AGENDA TU<br><em>CONSULTA</em><br>GRATIS</h2>
-        <p>¿Listo para llevar tu negocio al mundo digital? Contáctanos y te asesoramos sin costo ni compromiso.</p>
+        <!-- CAMBIO: "sin costo ni compromiso" → encuadre positivo -->
+        <p>¿Listo para llevar tu negocio al mundo digital? Escríbenos y recibe una asesoría gratuita, sin presión.</p>
         <div class="contact-methods">
           <a href="https://wa.me/528145408012?text=Hola!%20Me%20interesa%20información%20sobre%20sus%20servicios%20de%20diseño%20web" target="_blank" class="contact-method">
             <div class="method-icon">💬</div>
             <div class="method-info">
               <div class="method-label">WhatsApp Directo</div>
-              <div class="method-value">+52 814 540 8012 </div>
+              <div class="method-value">+52 814 540 8012</div>
             </div>
           </a>
           <a href="mailto:studio_laguna@hotmail.com" class="contact-method">
@@ -387,9 +400,9 @@
           <div class="form-title">Contactar Ahora</div>
           <div class="form-subtitle">Elige cómo quieres comunicarte</div>
           <div class="form-tabs">
-            <button class="form-tab active" onclick="switchTab('cita', this)">📅 Agendar Cita</button>
-            <button class="form-tab" onclick="switchTab('mensaje', this)">✉️ Enviar Mensaje</button>
-            <button class="form-tab" onclick="switchTab('whatsapp', this)">💬 WhatsApp</button>
+            <button class="form-tab active" onclick="switchTab('cita', this)">Agendar Cita</button>
+            <button class="form-tab" onclick="switchTab('mensaje', this)">Enviar Mensaje</button>
+            <button class="form-tab" onclick="switchTab('whatsapp', this)">WhatsApp</button>
           </div>
 
           <!-- CITA -->
@@ -398,6 +411,8 @@
               <div class="form-group">
                 <label for="nombre-cita">Nombre completo</label>
                 <input type="text" id="nombre-cita" placeholder="Juan García" />
+                <!-- CAMBIO: validación en línea en lugar de alert() -->
+                <span class="field-error" id="error-nombre-cita">Falta tu nombre</span>
               </div>
               <div class="form-group">
                 <label for="empresa">Empresa / Negocio</label>
@@ -408,6 +423,8 @@
               <div class="form-group">
                 <label for="tel-cita">WhatsApp / Teléfono</label>
                 <input type="tel" id="tel-cita" placeholder="+52 871 000 0000" />
+                <!-- CAMBIO: validación en línea en lugar de alert() -->
+                <span class="field-error" id="error-tel-cita">Falta tu WhatsApp o teléfono</span>
               </div>
               <div class="form-group">
                 <label for="email-cita">Correo electrónico</label>
@@ -421,8 +438,9 @@
               </div>
               <div class="form-group">
                 <label for="hora">Hora preferida</label>
+                <!-- CAMBIO: "Selecciona un horario" → "Elige una hora" -->
                 <select id="hora">
-                  <option value="">Selecciona un horario</option>
+                  <option value="">Elige una hora</option>
                   <option>09:00 - 10:00</option>
                   <option>10:00 - 11:00</option>
                   <option>11:00 - 12:00</option>
@@ -439,7 +457,8 @@
               <select id="servicio">
                 <option value="">¿Qué necesitas?</option>
                 <option>Diseño web desde cero</option>
-                <option>Tienda en línea (E-Commerce)</option>
+                <!-- CAMBIO: "Tienda en línea (E-Commerce)" → sin paréntesis técnico -->
+                <option>Tienda en línea</option>
                 <option>Landing Page</option>
                 <option>Rediseño de sitio existente</option>
                 <option>SEO y posicionamiento</option>
@@ -451,7 +470,8 @@
               <label for="notas-cita">Cuéntanos sobre tu proyecto</label>
               <textarea id="notas-cita" placeholder="Describe brevemente tu negocio y lo que buscas..."></textarea>
             </div>
-            <button class="btn-submit" onclick="submitForm('cita')">AGENDAR CITA →</button>
+            <!-- CAMBIO: "AGENDAR CITA →" → calidez y personificación -->
+            <button class="btn-submit" onclick="submitForm('cita')">Agendar mi cita →</button>
           </div>
 
           <!-- MENSAJE -->
@@ -460,6 +480,8 @@
               <div class="form-group">
                 <label for="nombre-msg">Tu nombre</label>
                 <input type="text" id="nombre-msg" placeholder="Juan García" />
+                <!-- CAMBIO: validación en línea -->
+                <span class="field-error" id="error-nombre-msg">Falta tu nombre</span>
               </div>
               <div class="form-group">
                 <label for="email-msg">Correo electrónico</label>
@@ -474,12 +496,16 @@
                 <option>Información de planes</option>
                 <option>Soporte técnico</option>
                 <option>Asociación o alianza</option>
-                <option>Otro</option>
+                <!-- CAMBIO: "Otro" → orientado al usuario -->
+                <option>Otro tema (especifícalo en el mensaje)</option>
               </select>
             </div>
             <div class="form-group">
               <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" style="min-height:130px;" placeholder="Escribe tu mensaje aquí..."></textarea>
+              <!-- CAMBIO: placeholder con pista de contenido esperado -->
+              <textarea id="mensaje" style="min-height:130px;" placeholder="Cuéntanos qué necesitas y en qué plazo lo necesitas"></textarea>
+              <!-- CAMBIO: validación en línea -->
+              <span class="field-error" id="error-mensaje">Falta tu mensaje</span>
             </div>
             <button class="btn-submit" onclick="submitForm('mensaje')">ENVIAR MENSAJE →</button>
           </div>
@@ -489,8 +515,9 @@
             <div style="text-align:center; padding: 1rem 0 2rem;">
               <div style="font-size:4rem; margin-bottom:1rem;">💬</div>
               <h3 style="font-family:var(--font-display); font-size:1.8rem; font-style:italic; margin-bottom:0.5rem;">Escríbenos por WhatsApp</h3>
+              <!-- CAMBIO: eliminar doble promesa contradictoria; alinear con texto de apoyo inferior -->
               <p style="color:var(--muted); font-size:0.9rem; margin-bottom:2rem; line-height:1.6;">
-                Respuesta rápida garantizada. Envíanos un mensaje directo y te atendemos al instante.
+                Respondemos en menos de 1 hora durante horario de atención. Escríbenos y resolvemos tus dudas.
               </p>
             </div>
             <div class="form-group">
@@ -500,7 +527,8 @@
             <div class="form-group">
               <label for="wa-interes">¿Qué necesitas?</label>
               <select id="wa-interes">
-                <option value="información sobre sus servicios">Información general</option>
+                <!-- CAMBIO: "Información general" → específico -->
+                <option value="información sobre servicios y precios">Información sobre servicios y precios</option>
                 <option value="cotización para diseño web">Cotización de diseño web</option>
                 <option value="cotización para tienda en línea">Tienda en línea</option>
                 <option value="cotización para landing page">Landing Page</option>
@@ -520,10 +548,12 @@
 
         <div class="success-msg" id="successMsg">
           <div class="success-icon">✅</div>
-          <h3>¡Mensaje Enviado!</h3>
-          <p>Gracias por contactarnos. Te responderemos en menos de 24 horas.</p>
+          <h3>Mensaje Enviado</h3>
+          <!-- CAMBIO: especificar canal de respuesta; añadir "hábiles" -->
+          <p>Gracias por contactarnos. Te escribiremos al correo o WhatsApp que nos compartiste en menos de 24 horas hábiles.</p>
           <br>
-          <button class="btn-outline" onclick="resetForm()" style="width:100%;">Enviar otro mensaje</button>
+          <!-- CAMBIO: "Enviar otro mensaje" → orientado a la acción real -->
+          <button class="btn-outline" onclick="resetForm()" style="width:100%;">Enviar otra solicitud</button>
         </div>
       </div>
     </div>
@@ -534,7 +564,8 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand-name">Studio <span>Laguna</span></div>
-        <p>Transformamos negocios con presencias digitales potentes, funcionales y que convierten. Orgullosamente basados en Torreón, Coahuila.</p>
+        <!-- CAMBIO: "presencias digitales" → "sitios web" -->
+        <p>Transformamos negocios con sitios web potentes, funcionales y que convierten. Orgullosamente basados en Torreón, Coahuila.</p>
       </div>
       <div class="footer-col">
         <h4>Servicios</h4>
@@ -627,18 +658,43 @@ function switchTab(tab, btn) {
   btn.classList.add('active');
 }
 
+/* ── Helpers de validación en línea ────────────── */
+/* CAMBIO: reemplaza alert() por mensajes de error junto al campo */
+function clearFieldError(inputId, errorId) {
+  const input = document.getElementById(inputId);
+  const error = document.getElementById(errorId);
+  if (input) input.classList.remove('error-field');
+  if (error) error.classList.remove('visible');
+}
+
+function showFieldError(inputId, errorId) {
+  const input = document.getElementById(inputId);
+  const error = document.getElementById(errorId);
+  if (input) input.classList.add('error-field');
+  if (error) error.classList.add('visible');
+  if (input) input.focus();
+}
+
 /* ── Form submit ───────────────────────────────── */
 function submitForm(type) {
   let valid = true;
+
   if (type === 'cita') {
     const n = document.getElementById('nombre-cita').value;
     const t = document.getElementById('tel-cita').value;
-    if (!n || !t) { alert('Por favor completa nombre y teléfono.'); valid = false; }
+    clearFieldError('nombre-cita', 'error-nombre-cita');
+    clearFieldError('tel-cita', 'error-tel-cita');
+    if (!n) { showFieldError('nombre-cita', 'error-nombre-cita'); valid = false; }
+    if (!t) { showFieldError('tel-cita', 'error-tel-cita'); valid = false; }
   } else if (type === 'mensaje') {
     const n = document.getElementById('nombre-msg').value;
     const m = document.getElementById('mensaje').value;
-    if (!n || !m) { alert('Por favor completa nombre y mensaje.'); valid = false; }
+    clearFieldError('nombre-msg', 'error-nombre-msg');
+    clearFieldError('mensaje', 'error-mensaje');
+    if (!n) { showFieldError('nombre-msg', 'error-nombre-msg'); valid = false; }
+    if (!m) { showFieldError('mensaje', 'error-mensaje'); valid = false; }
   }
+
   if (valid) {
     document.getElementById('formWrapper').style.display = 'none';
     document.getElementById('successMsg').classList.add('show');
@@ -667,6 +723,16 @@ if (dateInput) {
   const today = new Date(); today.setDate(today.getDate() + 1);
   dateInput.min = today.toISOString().split('T')[0];
 }
+
+/* ── Limpiar errores al escribir ───────────────── */
+['nombre-cita', 'tel-cita', 'nombre-msg', 'mensaje'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('input', () => {
+    el.classList.remove('error-field');
+    const err = document.getElementById('error-' + id);
+    if (err) err.classList.remove('visible');
+  });
+});
   </script>
 </body>
 </html>
