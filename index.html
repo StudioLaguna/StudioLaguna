@@ -676,35 +676,41 @@ function showFieldError(inputId, errorId) {
 }
 
 /* ── Form submit ───────────────────────────────── */
-function submitForm(type) {
+async function submitForm(type) {
   let valid = true;
-
   if (type === 'cita') {
     const n = document.getElementById('nombre-cita').value;
     const t = document.getElementById('tel-cita').value;
-    clearFieldError('nombre-cita', 'error-nombre-cita');
-    clearFieldError('tel-cita', 'error-tel-cita');
-    if (!n) { showFieldError('nombre-cita', 'error-nombre-cita'); valid = false; }
-    if (!t) { showFieldError('tel-cita', 'error-tel-cita'); valid = false; }
+    if (!n || !t) { alert('Por favor completa nombre y telefono.'); valid = false; }
   } else if (type === 'mensaje') {
     const n = document.getElementById('nombre-msg').value;
     const m = document.getElementById('mensaje').value;
-    clearFieldError('nombre-msg', 'error-nombre-msg');
-    clearFieldError('mensaje', 'error-mensaje');
-    if (!n) { showFieldError('nombre-msg', 'error-nombre-msg'); valid = false; }
-    if (!m) { showFieldError('mensaje', 'error-mensaje'); valid = false; }
+    if (!n || !m) { alert('Por favor completa nombre y mensaje.'); valid = false; }
   }
+  if (!valid) return;
 
-  if (valid) {
-    document.getElementById('formWrapper').style.display = 'none';
-    document.getElementById('successMsg').classList.add('show');
-  }
-}
+  const payload = {
+    type,
+    nombre: document.getElementById('nombre-cita')?.value || document.getElementById('nombre-msg')?.value,
+    telefono: document.getElementById('tel-cita')?.value || '',
+    email: document.getElementById('email-cita')?.value || document.getElementById('email-msg')?.value || '',
+    empresa: document.getElementById('empresa')?.value || '',
+    servicio: document.getElementById('servicio')?.value || '',
+    notas: document.getElementById('notas-cita')?.value || document.getElementById('mensaje')?.value || '',
+    timestamp: new Date().toISOString()
+  };
 
-function resetForm() {
-  document.getElementById('formWrapper').style.display = 'block';
-  document.getElementById('successMsg').classList.remove('show');
-}
+  try {
+    await fetch('https://studiolaguna.app.n8n.cloud/webhook/studio-laguna-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  } catch(e) { console.error(e); }
+
+  document.getElementById('formWrapper').style.display = 'none';
+  document.getElementById('successMsg').classList.add('show');
+}}
 
 /* ── WhatsApp ──────────────────────────────────── */
 function openWhatsApp(e) {
