@@ -701,7 +701,7 @@ async function submitForm(type) {
   };
 
   try {
-    await fetch('https://studiolaguna.app.n8n.cloud/webhook/studio-laguna-lead', {
+    await fetch('http://localhost:5678/webhook-test/studio-laguna-lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
