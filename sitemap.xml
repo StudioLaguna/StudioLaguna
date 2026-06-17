@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://studiolaguna.com.mx/</loc>
+    <lastmod>2025-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Secciones internas (anclas) — útil cuando Google rastrea la página -->
+  <url>
+    <loc>https://studiolaguna.com.mx/#servicios</loc>
+    <lastmod>2025-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://studiolaguna.com.mx/#precios</loc>
+    <lastmod>2025-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://studiolaguna.com.mx/#proceso</loc>
+    <lastmod>2025-06-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://studiolaguna.com.mx/#contacto</loc>
+    <lastmod>2025-06-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Cuando agregues páginas nuevas (blog, casos de estudio),
+       copia el bloque <url> de arriba y cambia la ruta y fecha.
+       Ejemplo:
+  <url>
+    <loc>https://studiolaguna.com.mx/blog/cuanto-cuesta-pagina-web-torreon/</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  -->
+
+</urlset>

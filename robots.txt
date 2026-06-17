@@ -1,0 +1,9 @@
+# robots.txt — Studio Laguna
+# https://studiolaguna.com.mx
+
+# Permitir acceso a todos los rastreadores
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://studiolaguna.com.mx/sitemap.xml
