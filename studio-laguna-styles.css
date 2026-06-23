@@ -1086,18 +1086,54 @@ footer::before {
   .logo-options { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  nav { padding: 1rem 1.5rem; }
+  body { cursor: auto; }
+  .cursor, .cursor-ring { display: none; }
+
+  nav { padding: 1rem 1.2rem; }
   .nav-links { display: none; }
-  .hero { padding: 6rem 1.5rem 10rem; }
-  .stats-strip { grid-template-columns: repeat(2, 1fr); bottom: 1rem; left: 1.5rem; right: 1.5rem; }
-  .section { padding: 4rem 1.5rem; }
-  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-  .form-row { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr 1fr; }
+  .nav-logo .logo-main { font-size: 0.9rem; letter-spacing: 2px; }
+  .nav-logo .logo-sub { font-size: 0.4rem; letter-spacing: 2px; }
+  .nav-cta { padding: 0.5rem 1rem; font-size: 0.6rem; }
+
+  .hero { padding: 6rem 1.2rem 8rem; min-height: auto; }
+  .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+  .hero-desc { font-size: 1rem; margin-bottom: 2rem; }
+  .hero-ornament { width: 100px; height: 100px; top: 4rem; right: 1rem; }
+  .stats-strip { 
+    position: static; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem; 
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+  }
+  .stat-num { font-size: 2.2rem; }
+
+  .section { padding: 4rem 1.2rem; }
+  .section-header { margin-bottom: 2.5rem; }
+  .section-title { font-size: 2.8rem; }
+  
+  .services-grid, .pricing-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; gap: 2rem; }
   .process-steps::before { display: none; }
-  .logo-showcase { padding: 4rem 1.5rem; }
+  .step { padding: 0 0 0 1.5rem; border-left: 1px solid var(--border); }
+  .step-dot { position: absolute; left: -8px; top: 0; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .form-container { padding: 1.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-tab { font-size: 0.55rem; padding: 0.6rem 0.4rem; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-bottom { flex-direction: column-reverse; gap: 1.5rem; text-align: center; }
+  
+  .whatsapp-float { bottom: 1.5rem; right: 1.5rem; width: 50px; height: 50px; font-size: 1.4rem; }
+  .logo-showcase { padding: 3rem 1.2rem; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.8rem; }
+  .section-title { font-size: 2.2rem; }
+  .price-amount { font-size: 2.8rem; }
 }
 
 /* ── Validación en línea (extraído de index.html) ── */
