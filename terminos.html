@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos y Condiciones — Studio Laguna · Torreón</title>
+  <meta name="description" content="Términos y condiciones de los servicios de diseño web, mantenimiento y gestión de redes sociales de Studio Laguna, Torreón, Coahuila." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="shortcut icon" href="/logo-mark-128.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Barlow+Condensed:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --tierra:   #1a110a;
+      --cantera:  #261a10;
+      --adobe:    #3d2814;
+      --barro:    #5c3d22;
+      --polvo:    #8c6245;
+      --arena:    #c4a882;
+      --crema:    #f0e6d6;
+      --sol:      #e8a020;
+      --cobre:    #c4621a;
+      --mezcal:   #6b8c42;
+      --border:   #3a2415;
+
+      --bg:       var(--tierra);
+      --bg2:      var(--cantera);
+      --surface:  var(--adobe);
+      --text:     var(--crema);
+      --muted:    var(--arena);
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Barlow Condensed', sans-serif;
+      --font-mono:    'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 400;
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* Texture */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+      pointer-events: none; opacity: 0.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 3rem;
+      background: rgba(26,17,10,0.95);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.7rem;
+      text-decoration: none;
+    }
+    .logo-mark { width: 32px; height: 32px; flex-shrink: 0; }
+    .logo-mark svg { width: 100%; height: 100%; }
+    .logo-main {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 900;
+      letter-spacing: 3px; color: var(--crema);
+      text-transform: uppercase; display: block; line-height: 1;
+    }
+    .logo-sub {
+      font-family: var(--font-mono);
+      font-size: 0.4rem; letter-spacing: 4px;
+      color: var(--sol); text-transform: uppercase;
+      display: block; margin-top: 1px;
+    }
+    .nav-back {
+      font-family: var(--font-mono);
+      font-size: 0.68rem; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 0.5rem;
+      transition: color 0.3s;
+    }
+    .nav-back:hover { color: var(--sol); }
+    .nav-back::before { content: '←'; }
+
+    /* ── HERO HEADER ── */
+    .page-header {
+      position: relative;
+      padding: 5rem 3rem 3rem;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .page-header::after {
+      content: '';
+      position: absolute; bottom: 0; left: 3rem; right: 3rem;
+      height: 3px;
+      background: linear-gradient(90deg, var(--sol), var(--cobre), transparent);
+    }
+    .header-glow {
+      position: absolute;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,160,32,0.07) 0%, transparent 70%);
+      top: -150px; right: -50px;
+      pointer-events: none;
+    }
+    .header-content { position: relative; z-index: 1; max-width: 760px; }
+    .page-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--sol);
+      margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.7rem;
+    }
+    .page-tag::before {
+      content: ''; display: block;
+      width: 28px; height: 2px;
+      background: linear-gradient(90deg, var(--sol), var(--cobre));
+    }
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900; line-height: 0.95;
+      margin-bottom: 1.2rem;
+    }
+    .page-header h1 em { color: var(--sol); font-style: italic; }
+    .page-meta {
+      font-family: var(--font-mono);
+      font-size: 0.65rem; letter-spacing: 2px;
+      color: var(--polvo); text-transform: uppercase;
+    }
+
+    /* ── LAYOUT ── */
+    .page-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+
+    /* ── SIDEBAR / TOC ── */
+    .toc {
+      position: sticky; top: 65px;
+      height: calc(100vh - 65px);
+      overflow-y: auto;
+      padding: 2.5rem 1.5rem 2.5rem 3rem;
+      border-right: 1px solid var(--border);
+    }
+    .toc-title {
+      font-family: var(--font-mono);
+      font-size: 0.6rem; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--sol);
+      margin-bottom: 1.5rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 0.1rem; }
+    .toc-list a {
+      font-family: var(--font-mono);
+      font-size: 0.62rem; letter-spacing: 1px;
+      color: var(--polvo);
+      text-decoration: none;
+      display: flex; align-items: flex-start; gap: 0.5rem;
+      padding: 0.4rem 0.6rem;
+      border-left: 2px solid transparent;
+      transition: all 0.2s; line-height: 1.4;
+    }
+    .toc-list a:hover,
+    .toc-list a.active {
+      color: var(--crema);
+      border-left-color: var(--sol);
+      background: rgba(232,160,32,0.06);
+    }
+    .toc-list a .num {
+      color: var(--sol); flex-shrink: 0;
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      padding: 3rem 3rem 6rem;
+    }
+    .section-block {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-block:last-child {
+      border-bottom: none;
+    }
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 0.6rem; letter-spacing: 3px;
+      color: var(--sol); text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .section-block h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem; font-weight: 700;
+      margin-bottom: 1.2rem; line-height: 1.2;
+    }
+    .section-block h2 em { color: var(--sol); font-style: italic; }
+
+    .section-block p {
+      font-size: 1rem; font-weight: 300;
+      color: var(--arena); line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .section-block p:last-child { margin-bottom: 0; }
+
+    /* Clausulas numeradas */
+    .clause-list {
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+    .clause-list li {
+      display: flex; gap: 1rem;
+      font-size: 0.98rem; font-weight: 300;
+      color: var(--arena); line-height: 1.8;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid rgba(58,36,21,0.5);
+    }
+    .clause-list li:last-child { border-bottom: none; }
+    .clause-num {
+      font-family: var(--font-mono);
+      font-size: 0.6rem; letter-spacing: 1px;
+      color: var(--sol); flex-shrink: 0;
+      padding-top: 0.35rem; min-width: 2.2rem;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: rgba(232,160,32,0.06);
+      border-left: 3px solid var(--sol);
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .highlight-box p {
+      color: var(--crema) !important;
+      font-size: 0.92rem !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* ── CONTACTO FINAL ── */
+    .contact-block {
+      background: var(--adobe);
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+    .contact-block::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      border-top: 20px solid var(--sol);
+      border-right: 20px solid transparent;
+    }
+    .contact-block h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem; font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .contact-block p {
+      font-size: 0.92rem; color: var(--arena);
+      margin-bottom: 1.5rem; font-weight: 300;
+    }
+    .contact-links {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+    }
+    .contact-link {
+      font-family: var(--font-mono);
+      font-size: 0.7rem; letter-spacing: 2px;
+      text-transform: uppercase; text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      border: 1px solid var(--border);
+      color: var(--muted); transition: all 0.3s;
+    }
+    .contact-link:hover { border-color: var(--sol); color: var(--sol); }
+    .contact-link.primary {
+      background: var(--sol); color: var(--tierra);
+      border-color: var(--sol);
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    }
+    .contact-link.primary:hover {
+      background: var(--crema); border-color: var(--crema);
+    }
+
+    /* ── CTA REGRESO ── */
+    .back-cta {
+      background: var(--cantera);
+      border-top: 1px solid var(--border);
+      padding: 3rem;
+      text-align: center;
+      position: relative; z-index: 1;
+    }
+    .back-cta p {
+      font-family: var(--font-mono);
+      font-size: 0.68rem; letter-spacing: 2px;
+      color: var(--polvo); text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .back-cta-links {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .btn-outline {
+      font-family: var(--font-mono);
+      font-size: 0.72rem; letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text); background: transparent;
+      border: 1px solid var(--barro);
+      padding: 0.8rem 1.8rem;
+      text-decoration: none; transition: all 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--sol); color: var(--sol); }
+    .btn-primary {
+      font-family: var(--font-mono);
+      font-size: 0.72rem; letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--tierra); background: var(--sol);
+      border: none; padding: 0.8rem 1.8rem;
+      text-decoration: none; transition: all 0.3s;
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    }
+    .btn-primary:hover { background: var(--crema); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--cantera);
+      border-top: 1px solid var(--border);
+      padding: 2rem 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+      position: relative; z-index: 1;
+    }
+    footer p {
+      font-family: var(--font-mono);
+      font-size: 0.65rem; color: var(--polvo);
+      letter-spacing: 1px;
+    }
+    footer a { color: var(--sol); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .page-header { padding: 4rem 1.5rem 2rem; }
+      .page-layout { grid-template-columns: 1fr; }
+      .toc {
+        position: static; height: auto;
+        padding: 2rem 1.5rem;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        background: var(--cantera);
+      }
+      .content { padding: 2rem 1.5rem 4rem; }
+      .back-cta { padding: 2rem 1.5rem; }
+      footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="20" r="8" fill="#e8a020" opacity="0.9"/>
+          <line x1="4" y1="20" x2="32" y2="20" stroke="#c4a882" stroke-width="1" opacity="0.5"/>
+          <line x1="18" y1="4" x2="18" y2="8" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="7" y1="9" x2="10" y2="12" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="29" y1="9" x2="26" y2="12" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="3" y1="19" x2="7" y2="19" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="33" y1="19" x2="29" y2="19" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M10 28h4v-3h8v3h4" stroke="#c4621a" stroke-width="1.2" fill="none" stroke-linecap="square"/>
+        </svg>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-main">Studio <span style="color:var(--sol)">Laguna</span></span>
+        <span class="logo-sub">Torreón · Diseño Web</span>
+      </div>
+    </a>
+    <a href="/" class="nav-back">Regresar al sitio</a>
+  </nav>
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <div class="header-glow"></div>
+    <div class="header-content">
+      <div class="page-tag">Documentos Legales</div>
+      <h1>Términos y<br><em>Condiciones</em></h1>
+      <p class="page-meta">Vigentes desde el 1 de enero de 2025 &nbsp;·&nbsp; Studio Laguna, Torreón, Coahuila</p>
+    </div>
+  </div>
+
+  <!-- LAYOUT: TOC + CONTENT -->
+  <div class="page-layout">
+
+    <!-- SIDEBAR: Tabla de contenidos -->
+    <aside class="toc">
+      <div class="toc-title">Contenido</div>
+      <ul class="toc-list">
+        <li><a href="#partes"><span class="num">01</span> Partes del contrato</a></li>
+        <li><a href="#servicios"><span class="num">02</span> Descripción de servicios</a></li>
+        <li><a href="#plazos"><span class="num">03</span> Proceso y plazos</a></li>
+        <li><a href="#pagos"><span class="num">04</span> Pagos y facturación</a></li>
+        <li><a href="#cancelaciones"><span class="num">05</span> Cancelaciones y reembolsos</a></li>
+        <li><a href="#cliente"><span class="num">06</span> Responsabilidades del cliente</a></li>
+        <li><a href="#proveedor"><span class="num">07</span> Responsabilidades de Studio Laguna</a></li>
+        <li><a href="#propiedad"><span class="num">08</span> Propiedad intelectual</a></li>
+        <li><a href="#dominio"><span class="num">09</span> Dominio y hosting</a></li>
+        <li><a href="#privacidad"><span class="num">10</span> Confidencialidad y privacidad</a></li>
+        <li><a href="#modificaciones"><span class="num">11</span> Modificaciones a estos términos</a></li>
+        <li><a href="#legislacion"><span class="num">12</span> Legislación aplicable</a></li>
+      </ul>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <div class="highlight-box">
+        <p>La contratación de cualquier servicio de Studio Laguna implica la aceptación total de estos términos y condiciones. Si tienes preguntas antes de contratar, escribenos por WhatsApp o correo antes de proceder.</p>
+      </div>
+
+      <!-- 01 -->
+      <div class="section-block" id="partes">
+        <div class="section-num">// 01</div>
+        <h2>Partes del <em>Contrato</em></h2>
+        <p>El presente documento establece los términos bajo los cuales Studio Laguna (en adelante "el Proveedor"), con operaciones en Torreón, Coahuila, presta sus servicios de diseño web, desarrollo, mantenimiento y gestión de redes sociales a la persona física o moral que contrate dichos servicios (en adelante "el Cliente").</p>
+        <p>La contratación de cualquier servicio de Studio Laguna implica la aceptación total de estos términos y condiciones.</p>
+      </div>
+
+      <!-- 02 -->
+      <div class="section-block" id="servicios">
+        <div class="section-num">// 02</div>
+        <h2>Descripción de <em>Servicios</em></h2>
+        <p>Studio Laguna ofrece los siguientes servicios:</p>
+        <ul class="clause-list">
+          <li><span class="clause-num">a)</span> Diseño y desarrollo de sitios web a medida.</li>
+          <li><span class="clause-num">b)</span> Creación de landing pages y tiendas en línea.</li>
+          <li><span class="clause-num">c)</span> Rediseño de sitios web existentes.</li>
+          <li><span class="clause-num">d)</span> Posicionamiento SEO (on-page y técnico).</li>
+          <li><span class="clause-num">e)</span> Planes de soporte y mantenimiento mensual.</li>
+          <li><span class="clause-num">f)</span> Gestión de redes sociales (Facebook e Instagram).</li>
+        </ul>
+        <p>El alcance específico de cada proyecto queda definido en la propuesta o cotización aceptada por ambas partes, la cual forma parte integral de este contrato.</p>
+      </div>
+
+      <!-- 03 -->
+      <div class="section-block" id="plazos">
+        <div class="section-num">// 03</div>
+        <h2>Proceso y Plazos de <em>Entrega</em></h2>
+        <ul class="clause-list">
+          <li>
+            <span class="clause-num">3.1</span>
+            Los plazos de entrega acordados comienzan a correr a partir del momento en que el Cliente entregue todos los materiales necesarios para el desarrollo del proyecto: textos, imágenes, logotipos, accesos y cualquier otro recurso requerido.
+          </li>
+          <li>
+            <span class="clause-num">3.2</span>
+            Si el Cliente no entrega los materiales en un plazo de 30 días naturales a partir de la firma de la propuesta o del pago del anticipo, Studio Laguna podrá dar por pausado el proyecto. La reactivación quedará sujeta a disponibilidad de agenda y podrá implicar un cargo adicional.
+          </li>
+          <li>
+            <span class="clause-num">3.3</span>
+            Los plazos estimados son referenciales. Causas fuera del control del Proveedor (demoras en la entrega de materiales, cambios de alcance, fallas en servicios de terceros) podrán extender los tiempos acordados sin que ello genere penalización.
+          </li>
+          <li>
+            <span class="clause-num">3.4</span>
+            El Cliente tendrá derecho a solicitar hasta dos rondas de revisiones sin costo adicional dentro del alcance original del proyecto. Las revisiones que impliquen cambios en el alcance o estructura del proyecto se cotizarán por separado.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 04 -->
+      <div class="section-block" id="pagos">
+        <div class="section-num">// 04</div>
+        <h2>Pagos y <em>Facturación</em></h2>
+        <ul class="clause-list">
+          <li>
+            <span class="clause-num">4.1</span>
+            <span><strong style="color:var(--crema)">Proyectos puntuales:</strong> Se requiere un anticipo del 50% para dar inicio al proyecto. El 50% restante deberá liquidarse antes de la publicación del sitio en el dominio definitivo o de la entrega final de los archivos.</span>
+          </li>
+          <li>
+            <span class="clause-num">4.2</span>
+            <span><strong style="color:var(--crema)">Planes de soporte mensual:</strong> El pago se realiza por adelantado, al inicio de cada mes de servicio. La falta de pago en los primeros cinco días del mes podrá resultar en la suspensión temporal del servicio hasta regularizar el saldo.</span>
+          </li>
+          <li>
+            <span class="clause-num">4.3</span>
+            Los precios están expresados en pesos mexicanos (MXN) e incluyen IVA cuando así se indique en la propuesta. En caso de requerirse factura, el Cliente deberá proporcionar sus datos fiscales antes de realizar el pago.
+          </li>
+          <li>
+            <span class="clause-num">4.4</span>
+            Studio Laguna se reserva el derecho de ajustar sus tarifas con un aviso previo de 30 días naturales. Los proyectos ya contratados y en proceso no se verán afectados por dichos ajustes.
+          </li>
+          <li>
+            <span class="clause-num">4.5</span>
+            Los pagos pueden realizarse por transferencia bancaria, depósito o los métodos que Studio Laguna indique en cada propuesta.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 05 -->
+      <div class="section-block" id="cancelaciones">
+        <div class="section-num">// 05</div>
+        <h2>Cancelaciones y <em>Reembolsos</em></h2>
+        <ul class="clause-list">
+          <li>
+            <span class="clause-num">5.1</span>
+            En proyectos puntuales, el anticipo pagado no es reembolsable una vez iniciado el trabajo, dado que cubre el tiempo y los recursos destinados al proyecto.
+          </li>
+          <li>
+            <span class="clause-num">5.2</span>
+            Si el Cliente decide cancelar el proyecto antes de que Studio Laguna haya iniciado trabajo alguno, podrá solicitarse el reembolso del anticipo dentro de los tres días hábiles siguientes al pago.
+          </li>
+          <li>
+            <span class="clause-num">5.3</span>
+            Los planes de soporte mensual pueden cancelarse en cualquier momento mediante aviso escrito con al menos 15 días naturales de anticipación al siguiente ciclo de cobro. No se generan reembolsos por el mes en curso.
+          </li>
+          <li>
+            <span class="clause-num">5.4</span>
+            Studio Laguna podrá dar por terminado el contrato de forma inmediata en caso de incumplimiento de pago por más de 15 días o de conducta inapropiada por parte del Cliente.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 06 -->
+      <div class="section-block" id="cliente">
+        <div class="section-num">// 06</div>
+        <h2>Responsabilidades del <em>Cliente</em></h2>
+        <ul class="clause-list">
+          <li>
+            <span class="clause-num">6.1</span>
+            El Cliente es responsable de proporcionar materiales (textos, imágenes, logotipos, videos) con plena autorización legal para su uso. Al entregar dichos materiales, garantiza que son de su propiedad o que cuenta con licencia para utilizarlos, liberando a Studio Laguna de cualquier reclamación de terceros.
+          </li>
+          <li>
+            <span class="clause-num">6.2</span>
+            El Cliente es responsable de revisar y aprobar el contenido publicado en su sitio web y redes sociales. La aprobación expresa (por mensaje, correo o cualquier medio escrito) equivale a aceptación del trabajo entregado.
+          </li>
+          <li>
+            <span class="clause-num">6.3</span>
+            En los planes de gestión de redes sociales, el Cliente deberá responder a la revisión de publicaciones programadas en un plazo máximo de 48 horas. Pasado ese tiempo, se entenderá que el contenido está aprobado para publicación.
+          </li>
+          <li>
+            <span class="clause-num">6.4</span>
+            El Cliente deberá proveer accesos necesarios (hosting, cuentas de redes sociales, registros DNS, etc.) en los plazos acordados para no retrasar el proyecto.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 07 -->
+      <div class="section-block" id="proveedor">
+        <div class="section-num">// 07</div>
+        <h2>Responsabilidades de <em>Studio Laguna</em></h2>
+        <ul class="clause-list">
+          <li>
+            <span class="clause-num">7.1</span>
+            El Proveedor se compromete a desarrollar los proyectos con profesionalismo, aplicando buenas prácticas de diseño y desarrollo web.
+          </li>
+          <li>
+            <span class="clause-num">7.2</span>
+            Studio Laguna se compromete a mantener la confidencialidad de la información del Cliente y no compartirla con terceros sin autorización expresa.
+          </li>
+          <li>
+            <span class="clause-num">7.3</span>
+            El Proveedor no garantiza resultados específicos de SEO, ventas o tráfico web, ya que estos dependen de factores externos (algoritmos de Google, competencia, condiciones de mercado) fuera de su control.
+          </li>
+          <li>
+            <span class="clause-num">7.4</span>
+            Studio Laguna no se hace responsable por interrupciones de servicio causadas por proveedores de hosting, registros de dominio, plataformas de redes sociales ni cortes de internet.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 08 -->
+      <div class="section-block" id="propiedad">
+        <div class="section-num">// 08</div>
+        <h2>Propiedad <em>Intelectual</em></h2>
+        <ul class="clause-list">
+          <li>
+            <span class="clause-num">8.1</span>
+            Una vez liquidado el pago total del proyecto, el Cliente adquiere los derechos de uso sobre el diseño y los contenidos desarrollados específicamente para su proyecto.
+          </li>
+          <li>
+            <span class="clause-num">8.2</span>
+            Studio Laguna se reserva el derecho de incluir el proyecto terminado en su portafolio de trabajos y material de promoción, salvo que el Cliente solicite expresamente lo contrario por escrito.
+          </li>
+          <li>
+            <span class="clause-num">8.3</span>
+            Las herramientas, frameworks, plantillas de código base y recursos de terceros utilizados en el desarrollo seguirán siendo propiedad de sus respectivos creadores y/o licenciantes. Studio Laguna entregará al Cliente únicamente los elementos desarrollados a medida para su proyecto.
+          </li>
+          <li>
+            <span class="clause-num">8.4</span>
+            En los planes de gestión de redes sociales, las piezas de diseño y textos producidos por Studio Laguna para el Cliente son de uso exclusivo del Cliente a partir de su aprobación y liquidación del servicio del mes en que fueron creadas.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 09 -->
+      <div class="section-block" id="dominio">
+        <div class="section-num">// 09</div>
+        <h2>Dominio y <em>Hosting</em></h2>
+        <ul class="clause-list">
+          <li>
+            <span class="clause-num">9.1</span>
+            Cuando el servicio incluya dominio y hosting, Studio Laguna gestionará la contratación con el proveedor correspondiente durante el periodo acordado (generalmente 1 año).
+          </li>
+          <li>
+            <span class="clause-num">9.2</span>
+            Al finalizar el periodo contratado, la renovación del dominio y hosting es responsabilidad del Cliente. Studio Laguna podrá gestionar la renovación si el Cliente lo solicita y liquida el costo correspondiente.
+          </li>
+          <li>
+            <span class="clause-num">9.3</span>
+            En caso de que el Cliente decida cambiar de proveedor o gestionar su propio hosting, Studio Laguna entregará los archivos del sitio web una vez cubierto el pago total del proyecto.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 10 -->
+      <div class="section-block" id="privacidad">
+        <div class="section-num">// 10</div>
+        <h2>Confidencialidad y <em>Privacidad</em></h2>
+        <ul class="clause-list">
+          <li>
+            <span class="clause-num">10.1</span>
+            Toda la información comercial, financiera o personal que el Cliente comparta con Studio Laguna durante la prestación de los servicios será tratada con estricta confidencialidad.
+          </li>
+          <li>
+            <span class="clause-num">10.2</span>
+            La información personal recopilada a través del sitio web de Studio Laguna (formularios de contacto, correo, WhatsApp) se utilizará exclusivamente para dar seguimiento a las solicitudes de servicio y no será compartida con terceros.
+          </li>
+          <li>
+            <span class="clause-num">10.3</span>
+            Ambas partes se obligan a no divulgar información confidencial de la otra parte, incluso después de concluida la relación de servicio.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 11 -->
+      <div class="section-block" id="modificaciones">
+        <div class="section-num">// 11</div>
+        <h2>Modificaciones a estos <em>Términos</em></h2>
+        <p>Studio Laguna se reserva el derecho de actualizar estos términos y condiciones en cualquier momento. Los cambios serán comunicados al Cliente con al menos 15 días de anticipación y aplicarán a los contratos que se celebren a partir de la fecha de entrada en vigor de la nueva versión. Los proyectos en curso no se verán afectados.</p>
+      </div>
+
+      <!-- 12 -->
+      <div class="section-block" id="legislacion">
+        <div class="section-num">// 12</div>
+        <h2>Legislación Aplicable y <em>Resolución de Conflictos</em></h2>
+        <ul class="clause-list">
+          <li>
+            <span class="clause-num">12.1</span>
+            El presente contrato se rige por las leyes vigentes del Estado de Coahuila de Zaragoza y de los Estados Unidos Mexicanos.
+          </li>
+          <li>
+            <span class="clause-num">12.2</span>
+            Ante cualquier controversia, ambas partes se comprometen a intentar una solución amigable en primera instancia, mediante comunicación directa.
+          </li>
+          <li>
+            <span class="clause-num">12.3</span>
+            En caso de no llegar a un acuerdo, las partes se someten a la jurisdicción de los tribunales competentes de la ciudad de Torreón, Coahuila, renunciando a cualquier otro fuero que pudiera corresponderles.
+          </li>
+        </ul>
+
+        <!-- Contacto -->
+        <div class="contact-block">
+          <h3>Dudas sobre estos términos</h3>
+          <p>Si tienes preguntas antes de contratar nuestros servicios, contactanos directamente. Respondemos en horario de atención Lun-Vie 9:00-18:00 · Sáb 10:00-14:00.</p>
+          <div class="contact-links">
+            <a href="https://wa.me/526142448419?text=Hola!%20Tengo%20una%20pregunta%20sobre%20los%20términos%20y%20condiciones." target="_blank" class="contact-link primary">WhatsApp</a>
+            <a href="mailto:studio_laguna@hotmail.com" class="contact-link">studio_laguna@hotmail.com</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- CTA DE REGRESO -->
+  <div class="back-cta">
+    <p>Listo para comenzar tu proyecto</p>
+    <div class="back-cta-links">
+      <a href="/#precios" class="btn-outline">Ver precios</a>
+      <a href="/#contacto" class="btn-primary">Agendar consulta gratuita</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Studio Laguna · Torreón, Coahuila · Todos los derechos reservados</p>
+    <p><a href="/">Regresar al sitio principal</a></p>
+  </footer>
+
+  <!-- TOC Active State Script -->
+  <script>
+    const sections = document.querySelectorAll('.section-block[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
