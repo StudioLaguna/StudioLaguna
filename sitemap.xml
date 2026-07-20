@@ -38,6 +38,12 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://studiolaguna.com.mx/terminos</loc>
+      <lastmod>2026-07-10</lastmod>
+      <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <!-- Cuando agregues páginas nuevas (blog, casos de estudio),
        copia el bloque <url> de arriba y cambia la ruta y fecha.
        Ejemplo:
