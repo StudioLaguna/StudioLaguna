@@ -1,0 +1,104 @@
+/* ══════════════════════════════════════════════════════════════
+   STUDIO LAGUNA — Endpoint de lectura de leads para el panel
+   ══════════════════════════════════════════════════════════════
+
+   QUÉ HACE:
+   Agrega una función doGet(e) a tu Google Apps Script que devuelve,
+   en formato JSON, todos los leads de tu hoja "Leads", protegidos
+   por un token secreto.
+
+   CÓMO INTEGRARLO:
+   1. Abre tu proyecto de Apps Script (el mismo que recibe el webhook
+      del formulario).
+   2. IMPORTANTE: Apps Script solo permite UNA función doGet por
+      proyecto. Si tu script YA tiene una función doGet:
+        - No crees una segunda. Copia el CONTENIDO de la función de
+          abajo dentro de tu doGet existente, o usa el parámetro
+          "e.parameter.action" para decidir qué hacer (ver ejemplo
+          al final de este archivo).
+      Si tu script NO tiene doGet todavía, simplemente pega esta
+      función completa en cualquier parte del archivo .gs.
+
+   3. Cambia ACCESS_TOKEN por una cadena larga y aleatoria (no la
+      dejes como está). Ejemplo de cómo generar una:
+      https://www.uuidgenerator.net/  (usa el UUID como token)
+
+   4. Guarda el proyecto (Ctrl+S / Cmd+S).
+
+   5. Ve a "Implementar" → "Gestionar implementaciones" → ícono de
+      lápiz en tu implementación activa → en "Versión" elige
+      "Nueva versión" → Implementar.
+      (Esto es lo mismo que ya haces cada vez que cambias el script.)
+
+   6. Copia la URL del Web App (termina en /exec). Esa es la URL que
+      debes pegar en la configuración del panel de leads, junto con
+      el token que elegiste.
+
+   ══════════════════════════════════════════════════════════════ */
+
+function doGet(e) {
+  const ACCESS_TOKEN = 'CAMBIA_ESTE_TOKEN_POR_UNO_LARGO_Y_SECRETO';
+  const SPREADSHEET_ID = '1P6E7Q6QwqRfilRvViY2P8njweHKvum6pZcy4MAegH24';
+  const SHEET_NAME = 'Leads';
+
+  // Protección básica por token compartido
+  if (!e.parameter.token || e.parameter.token !== ACCESS_TOKEN) {
+    return ContentService.createTextOutput(JSON.stringify({ error: 'No autorizado' }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  try {
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    const sheet = ss.getSheetByName(SHEET_NAME);
+
+    if (!sheet) {
+      return ContentService.createTextOutput(JSON.stringify({ error: 'No se encontró la hoja "Leads"' }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    const data = sheet.getDataRange().getValues();
+    if (data.length < 2) {
+      return ContentService.createTextOutput(JSON.stringify({ leads: [] }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    const headers = data[0].map(h => String(h).trim());
+    const rows = data.slice(1);
+
+    const leads = rows
+      .filter(row => row.some(cell => cell !== '' && cell != null))
+      .map((row, i) => {
+        const obj = { _row: i + 2 }; // número de fila real en el Sheet
+        headers.forEach((h, idx) => {
+          const val = row[idx];
+          // Convierte fechas de Sheets a texto ISO para que el panel las lea bien
+          obj[h] = (val instanceof Date) ? val.toISOString() : val;
+        });
+        return obj;
+      })
+      .reverse(); // los más recientes primero
+
+    return ContentService.createTextOutput(JSON.stringify({ leads }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ error: String(err) }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SI TU SCRIPT YA TIENE UN doGet (ejemplo de cómo combinarlos):
+   ══════════════════════════════════════════════════════════════
+
+   function doGet(e) {
+     if (e.parameter.action === 'leads') {
+       return getLeadsJson(e);   // la lógica de arriba, movida a su
+                                  // propia función getLeadsJson(e)
+     }
+     // ... el resto de tu doGet existente ...
+   }
+
+   En ese caso, la URL del panel sería:
+   https://script.google.com/macros/s/TU_ID/exec?action=leads&token=TU_TOKEN
+   ══════════════════════════════════════════════════════════════ */
