@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Leads — Studio Laguna</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="manifest" href="/leads/manifest.json">
+  <meta name="theme-color" content="#12180d">
+  <link rel="apple-touch-icon" href="/leads/icons/icon-leads-180.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SL Leads">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow+Condensed:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/leads/leads.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-main">Studio <span class="accent">Laguna</span></span>
+      <span class="brand-sub">Panel de Leads</span>
+    </div>
+    <div class="topbar-actions">
+      <span id="statusDot" class="status-dot" title="Estado de conexión"></span>
+      <button id="refreshBtn" class="icon-btn" title="Actualizar" aria-label="Actualizar">⟳</button>
+      <button id="settingsBtn" class="icon-btn" title="Configuración" aria-label="Configuración">⚙</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <input id="searchInput" type="text" placeholder="Buscar por nombre, teléfono, servicio..." />
+    <div class="filter-chips" id="filterChips"></div>
+  </div>
+
+  <main id="main">
+    <div id="emptyState" class="empty-state" style="display:none;">
+      <div class="empty-icon">◆</div>
+      <p>Aún no hay leads que mostrar.</p>
+    </div>
+    <div id="loadingState" class="loading-state">
+      <div class="spinner"></div>
+      <p>Cargando leads...</p>
+    </div>
+    <div id="errorState" class="error-state" style="display:none;">
+      <p id="errorText">No se pudo conectar con el servidor.</p>
+      <button id="retryBtn" class="btn-outline">Reintentar</button>
+    </div>
+    <div id="leadsList" class="leads-list"></div>
+  </main>
+
+  <!-- Modal de configuración -->
+  <div id="settingsModal" class="modal-overlay" style="display:none;">
+    <div class="modal">
+      <h2>Configuración</h2>
+      <p class="modal-desc">Conecta el panel con tu Google Apps Script. Estos datos se guardan solo en este dispositivo.</p>
+      <label for="endpointInput">URL del Web App (Apps Script)</label>
+      <input id="endpointInput" type="text" placeholder="https://script.google.com/macros/s/XXXX/exec" />
+      <label for="tokenInput">Token de acceso</label>
+      <input id="tokenInput" type="text" placeholder="Tu token secreto" />
+      <div class="modal-actions">
+        <button id="cancelSettingsBtn" class="btn-outline">Cancelar</button>
+        <button id="saveSettingsBtn" class="btn-primary">Guardar y cargar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de detalle de lead -->
+  <div id="detailModal" class="modal-overlay" style="display:none;">
+    <div class="modal modal-detail">
+      <button id="closeDetailBtn" class="modal-close" aria-label="Cerrar">×</button>
+      <div id="detailContent"></div>
+    </div>
+  </div>
+
+  <button id="installBtn" class="install-float" style="display:none;" aria-label="Instalar panel">
+    <span class="tooltip">Instalar panel</span>
+    ⬇
+  </button>
+
+  <script src="/leads/leads.js"></script>
+</body>
+</html>

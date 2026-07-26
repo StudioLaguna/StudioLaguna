@@ -1,1 +1,22 @@
-
+{
+  "id": "/leads/",
+  "name": "Studio Laguna — Panel de Leads",
+  "short_name": "SL Leads",
+  "description": "Panel interno para ver y gestionar los leads recibidos por Studio Laguna.",
+  "start_url": "/leads/",
+  "scope": "/leads/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#12180d",
+  "theme_color": "#12180d",
+  "lang": "es-MX",
+  "dir": "ltr",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "/leads/icons/icon-leads-96.png",  "sizes": "96x96",   "type": "image/png" },
+    { "src": "/leads/icons/icon-leads-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/leads/icons/icon-leads-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/leads/icons/icon-leads-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/leads/icons/icon-leads-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
