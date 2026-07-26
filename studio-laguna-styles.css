@@ -888,6 +888,40 @@ footer::before {
   50% { transform: translateY(-8px); }
 }
 
+/* ── Install App float (PWA) ───────────────────── */
+.install-float {
+  position: fixed;
+  bottom: 2rem; left: 2rem;
+  z-index: 1000;
+  width: 60px; height: 60px;
+  background: var(--sol);
+  color: var(--tierra);
+  border: none;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 20px rgba(232,160,32,0.4);
+  transition: transform 0.3s;
+}
+.install-float:hover { transform: scale(1.15); }
+.install-float .wa-tooltip {
+  position: absolute;
+  left: 70px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.install-float:hover .wa-tooltip { opacity: 1; }
+
 /* ── Scroll animations ──────────────────────────── */
 .reveal {
   opacity: 0;
@@ -925,227 +959,18 @@ footer::before {
   to { transform: translateX(-50%); }
 }
 
-/* ══════════════════════════════════════════════════
-   LOGO OPTIONS SECTION
-   ══════════════════════════════════════════════════ */
-.logo-showcase {
-  background: var(--bg2);
-  padding: 6rem 3rem;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.logo-showcase-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-.logo-showcase-header h2 {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
-.logo-showcase-header p {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 3px;
-  color: var(--sol);
-  text-transform: uppercase;
-}
-.logo-options {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.logo-option {
-  background: var(--tierra);
-  padding: 3.5rem 2.5rem;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 2rem;
-  position: relative;
-  transition: background 0.3s;
-}
-.logo-option:hover { background: var(--cantera); }
-
-/* Dark variant preview */
-.logo-option.on-light {
-  background: var(--crema);
-}
-.logo-option.on-light:hover { background: var(--hueso); }
-
-.logo-option-label {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-align: center;
-}
-.logo-option.on-light .logo-option-label { color: var(--barro); }
-
-.option-name {
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--sol);
-  text-align: center;
-  position: absolute;
-  top: 1rem; left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-}
-.option-name.dark { color: var(--cobre); }
-
-/* ── LOGO A: "Sol Lagunero" — Sun + serif stacked ── */
-.logo-a { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
-.logo-a-mark svg { display: block; }
-.logo-a-text {
-  text-align: center;
-}
-.logo-a-text .main {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 900;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  display: block;
-  color: var(--crema);
-  line-height: 1;
-}
-.logo-a-text .sub {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.42rem;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: var(--sol);
-  display: block;
-  margin-top: 4px;
-}
-/* on-light version of A */
-.on-light .logo-a-text .main { color: var(--tierra); }
-.on-light .logo-a-text .sub { color: var(--cobre); }
-
-/* ── LOGO B: "Cantera" — Block letters + geometric mark ── */
-.logo-b { display: flex; align-items: center; gap: 1rem; }
-.logo-b-text .main {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--crema);
-  display: block;
-  line-height: 1;
-}
-.logo-b-text .sub {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.38rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: var(--sol);
-  display: block;
-  margin-top: 5px;
-}
-.on-light .logo-b-text .main { color: var(--tierra); }
-.on-light .logo-b-text .sub { color: var(--cobre); }
-
-/* ── LOGO C: "Sotol" — Minimal monogram + wordmark ── */
-.logo-c { display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; padding-left: 1rem; border-left: 3px solid var(--sol); }
-.logo-c-main {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: var(--crema);
-  line-height: 1;
-}
-.logo-c-row {
-  display: flex; align-items: center; gap: 0.6rem; width: 100%;
-}
-.logo-c-line { flex: 1; height: 1px; background: var(--sol); opacity: 0.4; }
-.logo-c-sub {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.38rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: var(--sol);
-}
-.on-light .logo-c { border-left-color: var(--cobre); }
-.on-light .logo-c-main { color: var(--tierra); }
-.on-light .logo-c-sub { color: var(--cobre); }
-.on-light .logo-c-line { background: var(--cobre); }
-
 /* ── RESPONSIVE ─────────────────────────────────── */
-@media (max-width: 900px) {
-  .logo-options { grid-template-columns: 1fr; }
-}
 @media (max-width: 768px) {
-  body { cursor: auto; }
-  .cursor, .cursor-ring { display: none; }
-
-  nav { padding: 1rem 1.2rem; }
+  nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
-  .nav-logo .logo-main { font-size: 0.9rem; letter-spacing: 2px; }
-  .nav-logo .logo-sub { font-size: 0.4rem; letter-spacing: 2px; }
-  .nav-cta { padding: 0.5rem 1rem; font-size: 0.6rem; }
-
-  .hero { padding: 6rem 1.2rem 8rem; min-height: auto; }
-  .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-  .hero-desc { font-size: 1rem; margin-bottom: 2rem; }
-  .hero-ornament { width: 100px; height: 100px; top: 4rem; right: 1rem; }
-  .stats-strip { 
-    position: static; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 1.5rem; 
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-  }
-  .stat-num { font-size: 2.2rem; }
-
-  .section { padding: 4rem 1.2rem; }
-  .section-header { margin-bottom: 2.5rem; }
-  .section-title { font-size: 2.8rem; }
-  
-  .services-grid, .pricing-grid { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr; gap: 2rem; }
-  .process-steps::before { display: none; }
-  .step { padding: 0 0 0 1.5rem; border-left: 1px solid var(--border); }
-  .step-dot { position: absolute; left: -8px; top: 0; }
-
-  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .form-container { padding: 1.5rem; }
+  .hero { padding: 6rem 1.5rem 10rem; }
+  .stats-strip { grid-template-columns: repeat(2, 1fr); bottom: 1rem; left: 1.5rem; right: 1.5rem; }
+  .section { padding: 4rem 1.5rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
   .form-row { grid-template-columns: 1fr; }
-  .form-tab { font-size: 0.55rem; padding: 0.6rem 0.4rem; }
-
-  .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .footer-bottom { flex-direction: column-reverse; gap: 1.5rem; text-align: center; }
-  
-  .whatsapp-float { bottom: 1.5rem; right: 1.5rem; width: 50px; height: 50px; font-size: 1.4rem; }
-  .logo-showcase { padding: 3rem 1.2rem; }
-}
-
-@media (max-width: 480px) {
-  .hero h1 { font-size: 2.8rem; }
-  .section-title { font-size: 2.2rem; }
-  .price-amount { font-size: 2.8rem; }
-}
-
-/* ── Validación en línea (extraído de index.html) ── */
-.field-error {
-  display: none;
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 1px;
-  color: #ff6b35;
-  margin-top: 0.3rem;
-}
-.field-error.visible { display: block; }
-input.error-field, textarea.error-field {
-  border-color: #ff6b35 !important;
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .process-steps::before { display: none; }
+  .install-float { width: 52px; height: 52px; bottom: 1.5rem; left: 1.5rem; }
 }

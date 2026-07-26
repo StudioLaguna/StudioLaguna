@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <title> Studio Laguna </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- SEO básico -->
-  <meta name="description" content="Studio Laguna: diseño y gestión de sitios web en Torreón, Coahuila. Creamos páginas web profesionales para negocios locales en La Laguna. Consulta gratuita." />
-  <meta name="keywords" content="diseño web Torreón, páginas web Torreón, agencia web Torreón, diseño web Coahuila, diseño web La Laguna, mantenimiento web Torreón" />
-  <meta name="author" content="Studio Laguna" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://studiolaguna.com.mx/" />
- 
-  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Studio Laguna" />
-  <meta property="og:title" content="Studio Laguna — Diseño Web en Torreón, Coahuila" />
-  <meta property="og:description" content="Creamos sitios web profesionales para negocios en Torreón y La Laguna. Diseño personalizado, mantenimiento y SEO. Consulta gratuita." />
-  <meta property="og:url" content="https://studiolaguna.com.mx/" />
-  <meta property="og:image" content="https://studiolaguna.com.mx/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:locale" content="es_MX" />
- 
-<link rel="icon" href="/logo-mark-128.png" type="image/png">
-<link rel="shortcut icon" href="/logo-mark-128.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STUDIO LAGUNA — Diseño & Gestión Web · Torreón</title>
+  <link rel="shortcut icon" href="/logo-mark-128.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow+Condensed:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/studio-laguna-styles.css"/>
   <script src="main.js" defer></script>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1a110a">
+  <link rel="apple-touch-icon" href="/icons/icon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Studio Laguna">
 </head>
 <body>
 
@@ -257,112 +250,106 @@
     </div>
 
     <!-- PROYECTOS PUNTUALES -->
- <!-- PROYECTOS PUNTUALES -->
-    <div style="margin-bottom: 4rem;">
-      <div style="margin-bottom: 1.5rem;">
-        <h3 style="font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 0.3rem;">PROYECTOS WEB</h3>
-        <p style="color: var(--muted); font-size: 0.85rem; font-family: var(--font-mono); letter-spacing: 1px;">Pago único · Dominio + hosting 1 año incluidos</p>
+    <div style="margin-bottom: 3rem;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <h3 style="font-family: var(--font-display); font-size: 1.8rem; letter-spacing: 1px; margin-bottom: 0.5rem;">PROYECTOS PUNTUALES</h3>
+        <p style="color: var(--muted); font-size: 0.9rem;">Pago único. Incluye dominio + hosting 1 año.</p>
       </div>
       <div class="pricing-grid reveal">
- 
-        <!-- Landing Page -->
         <div class="price-card">
           <div class="price-plan">Landing Page</div>
           <div class="price-amount"><sup>$</sup>4,500</div>
           <div class="price-period">MXN · Pago único</div>
           <ul class="price-features">
-            <li class="included">Pagina unica optimizada</li>
-            <li class="included">Diseño responsive</li>
-            <li class="included">Formulario + WhatsApp</li>
-            <li class="included">SEO basico</li>
+            <li class="included">Página única optimizada</li>
+            <li class="included">Diseño responsive moderno</li>
+            <li class="included">Formulario de contacto</li>
+            <li class="included">Integración WhatsApp</li>
+            <li class="included">SEO básico</li>
             <li class="included">Dominio + Hosting 1 año</li>
+            <!-- CAMBIO: explicitar que no está incluido en este plan -->
+            <li>Análisis de conversión (no incluido en este plan)</li>
           </ul>
-          <div class="price-addon">
-            <div class="price-addon-label">+ Redes Sociales</div>
-                        <div class="price-addon-options">
-              <span class="addon-chip addon-chip--highlight">Redes Sociales <strong>$800/mes</strong></span>
-            </div>
-          </div>
-          <a href="#contacto" class="btn-outline" style="display:block; text-align:center; margin-top:1.2rem;">Solicitar cotizacion</a>
+          <!-- CAMBIO: "CONSULTAR" → accionable -->
+          <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">Solicitar cotización</a>
         </div>
- 
-        <!-- E-commerse -->
         <div class="price-card">
-          <div class="price-plan">E-commerse básico</div>
+          <div class="price-plan">Sitio Web Básico</div>
           <div class="price-amount"><sup>$</sup>7,500</div>
           <div class="price-period">MXN · Pago único</div>
           <ul class="price-features">
-            <li class="included">Landing page + Tienda</li>
-            <li class="included">Diseño responsive</li>
-            <li class="included">Respaldos</li>
+            <li class="included">Hasta 8 páginas personalizadas</li>
+            <li class="included">Diseño responsive premium</li>
+            <li class="included">Blog integrado</li>
+            <li class="included">Formularios avanzados</li>
             <li class="included">SEO optimizado</li>
             <li class="included">Dominio + Hosting 1 año</li>
-            <li class="included">Capacitacion basica</li>
+            <li class="included">Capacitación básica</li>
           </ul>
-          <div class="price-addon">
-            <div class="price-addon-label">+ Redes Sociales</div>
-                        <div class="price-addon-options">
-              <span class="addon-chip addon-chip--highlight">Redes Sociales <strong>$800/mes</strong></span>
-            </div>
-          </div>
-          <a href="#contacto" class="btn-outline" style="display:block; text-align:center; margin-top:1.2rem;">Solicitar cotizacion</a>
+          <!-- CAMBIO: "CONSULTAR" → accionable -->
+          <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">Solicitar cotización</a>
         </div>
- 
-        <!-- E-commerse Profesional -->
-        <div class="price-card">
-          <div class="price-plan">Sitio Web + E-commerse Profesional</div>
+        <div class="price-card featured">
+          <div class="price-plan">Sitio Web Profesional</div>
           <div class="price-amount"><sup>$</sup>12,000</div>
           <div class="price-period">MXN · Pago único</div>
           <ul class="price-features">
-            <li class="included">Compras en linea</li>
+            <li class="included">Hasta 15 páginas diseñadas</li>
             <li class="included">Diseño exclusivo a medida</li>
-            <li class="included">SEO completo + auditoria</li>
+            <li class="included">Blog + CMS avanzado</li>
+            <li class="included">E-Commerce básico</li>
+            <li class="included">SEO completo + auditoría</li>
             <li class="included">Dominio + Hosting 1 año</li>
             <li class="included">Soporte 3 meses incluido</li>
           </ul>
-          <div class="price-addon">
-            <div class="price-addon-label">+ Redes Sociales</div>
-                        <div class="price-addon-options">
-              <span class="addon-chip addon-chip--highlight">Redes Sociales <strong>$800/mes</strong></span>
-            </div>
-          </div>
-          <a href="#contacto" class="btn-outline" style="display:block; text-align:center; margin-top:1.2rem;">Solicitar cotizacion</a>
+          <!-- CAMBIO: "CONSULTAR" → accionable -->
+          <a href="#contacto" class="btn-primary" style="display:block; text-align:center;">Solicitar cotización</a>
         </div>
-        
-    <!-- Redes agregadas al principal -->
-  <div class="pricing-grid reveal" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
- 
+      </div>
+    </div>
+
+    <!-- SOPORTE Y MANTENIMIENTO MENSUAL -->
+    <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <h3 style="font-family: var(--font-display); font-size: 1.8rem; letter-spacing: 1px; margin-bottom: 0.5rem;">SOPORTE CONTINUO</h3>
+        <p style="color: var(--muted); font-size: 0.9rem;">Mantenimiento y actualizaciones mensuales. Cancelable en cualquier momento.</p>
+      </div>
+      <div class="pricing-grid reveal" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
         <div class="price-card">
-          <div class="price-plan">Administracion de Redes</div>
-          <div class="price-amount"><sup>$</sup>800</div>
+          <div class="price-plan">Soporte Básico</div>
+          <div class="price-amount"><sup>$</sup>1,500</div>
           <div class="price-period">MXN · Mensualidad</div>
           <ul class="price-features">
-            <li class="included">Facebook + Instagram</li>
-            <li class="included">8 publicaciones al mes</li>
-            <li class="included">Diseño con tu imagen de marca</li>
-            <li class="included">Gestion de comentarios basica</li>
-            <li class="included">Reporte mensual de metricas</li>
+            <li class="included">Actualizaciones mensuales</li>
+            <li class="included">Cambios de contenido ilimitados</li>
+            <li class="included">Backups automáticos</li>
+            <li class="included">Monitoreo de seguridad</li>
+            <li class="included">Soporte por email</li>
+            <li>Análisis de tráfico</li>
+            <li>Optimización SEO</li>
           </ul>
-          <a href="#contacto" class="btn-primary" style="display:block; text-align:center;">Solicitar informacion</a>
+          <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">CONTRATAR</a>
         </div>
- 
-      </div>
+        <div class="price-card featured">
+          <div class="price-plan">Soporte Premium</div>
+          <div class="price-amount"><sup>$</sup>2,500</div>
+          <div class="price-period">MXN · Mensualidad</div>
+          <ul class="price-features">
+            <!-- CAMBIO: "Todo de Soporte Básico +" → gramática correcta -->
+            <li class="included">Todo lo del plan Básico, además de:</li>
+            <!-- CAMBIO: "Respuesta en máximo 24hrs" → encuadre positivo -->
+            <li class="included">Respuesta en menos de 24 horas</li>
+            <li class="included">Análisis mensual de SEO</li>
+            <li class="included">Optimización de velocidad</li>
+            <li class="included">Consultoría digital 1hr/mes</li>
+            <li class="included">Soporte por WhatsApp</li>
+            <li class="included">Actualizaciones prioritarias</li>
+          </ul>
+          <a href="#contacto" class="btn-primary" style="display:block; text-align:center;">CONTRATAR</a>
+        </div>
       </div>
     </div>
- 
-    <!-- SOPORTE CONTINUO 
-  
-    <!-- REDES SOCIALES 
-    <div style="padding-top: 3rem; border-top: 1px solid var(--border);">
-      <div style="margin-bottom: 1.5rem;">
-        <h3 style="font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 0.3rem;">REDES SOCIALES</h3>
-        <p style="color: var(--muted); font-size: 0.85rem; font-family: var(--font-mono); letter-spacing: 1px;">Mensualidad · Facebook e Instagram · Cancelable en cualquier momento</p>
-      </div>
-     
-    </div>
- 
   </section>
- -->
 
   <!-- CONTACT -->
   <section class="section contact-section" id="contacto">
@@ -605,10 +592,11 @@
       </div>
     </div>
     <div class="footer-bottom">
-     <p>© 2025 STUDIO LAGUNA · Todos los derechos reservados · Torreón, Coahuila · <a href="/terminos.html" style="color:var(--sol)">Términos y Condiciones</a></p>
+      <p>© 2025 STUDIO LAGUNA · Todos los derechos reservados · Torreón, Coahuila</p>
       <div class="social-links">
         <a href="#" class="social-link">ig</a>
-        <a href="https://www.facebook.com/profile.php?id=61589472718955" target="_blank" class="social-link">fb</a>
+        <a href="#" class="social-link">fb</a>
+        <a href="#" class="social-link">li</a>
         <a href="https://wa.me/52614244848419" target="_blank" class="social-link" style="border-color:#25D366;color:#25D366;">wa</a>
       </div>
     </div>
@@ -620,117 +608,44 @@
     <span class="wa-tooltip">Escríbenos ahora</span>
     💬
   </a>
- <!-- Schema.org LocalBusiness — SEO local estructurado -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Studio Laguna",
-    "description": "Agencia de diseño y gestión web en Torreón, Coahuila. Creamos sitios web profesionales para negocios locales en La Laguna.",
-    "url": "https://studiolaguna.com.mx",
-    "logo": "https://studiolaguna.com.mx/logo-mark-512.png",
-    "image": "https://studiolaguna.com.mx/og-image.jpg",
-    "telephone": "+52-614-244-8419",
-    "email": "studio_laguna@hotmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Torreón",
-      "addressRegion": "Coahuila",
-      "addressCountry": "MX"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 25.5428,
-      "longitude": -103.4068
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "10:00",
-        "closes": "14:00"
-      }
-    ],
-    "priceRange": "$$",
-    "currenciesAccepted": "MXN",
-    "paymentAccepted": "Transferencia, Tarjeta, Efectivo",
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Torreón"
-      },
-      {
-        "@type": "City",
-        "name": "Gómez Palacio"
-      },
-      {
-        "@type": "City",
-        "name": "Lerdo"
-      }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Servicios de diseño web",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Diseño Web a Medida",
-            "description": "Sitios web únicos y profesionales adaptados a la identidad de tu marca."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Landing Page",
-            "description": "Páginas de aterrizaje de alta conversión.",
-            "offers": {
-              "@type": "Offer",
-              "price": "4500",
-              "priceCurrency": "MXN"
-            }
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Sitio Web Profesional",
-            "description": "Hasta 15 páginas con diseño exclusivo, CMS avanzado y SEO completo.",
-            "offers": {
-              "@type": "Offer",
-              "price": "12000",
-              "priceCurrency": "MXN"
-            }
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Mantenimiento Web Mensual",
-            "description": "Actualizaciones, backups, seguridad y soporte continuo.",
-            "offers": {
-              "@type": "Offer",
-              "price": "1500",
-              "priceCurrency": "MXN"
-            }
-          }
-        }
-      ]
-    },
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61589472718955"
-    ]
-  }
+
+  <!-- Floating Install App (aparece solo si el navegador ofrece instalación) -->
+  <button id="installBtn" class="install-float" style="display:none;" aria-label="Instalar app">
+    <span class="wa-tooltip">Instalar app</span>
+    ⬇
+  </button>
+
+  <script>
+    /* ── PWA: registro de service worker ──────────── */
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(err => console.error('SW error:', err));
+      });
+    }
+
+    /* ── PWA: botón de instalación personalizado ──── */
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = 'flex';
+    });
+
+    installBtn.addEventListener('click', async () => {
+      if (!deferredPrompt) return;
+      installBtn.style.display = 'none';
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+    });
+
+    window.addEventListener('appinstalled', () => {
+      installBtn.style.display = 'none';
+      deferredPrompt = null;
+    });
   </script>
+
 </body>
 </html>
